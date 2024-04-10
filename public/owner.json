@@ -1,0 +1,145 @@
+ [
+      {
+        "duration":"1000",
+        "delay":"0",
+        "animation":"fade-right",
+         "easing":"ease",
+        "name": "Emily Johnson",
+        "designation": "CEO of Sunset Bay Hotel",
+        "contact": "+1 (123) 456-7890",
+        "email": "emily@gmail.com",
+        "hotel_name": "Sunset Bay Hotel",
+        "img": "https://i.ibb.co/H2NrY0j/5360.jpg"
+      },
+      {
+        "duration":"1000",
+        "delay":"300",
+        "animation":"fade-right",
+        "easing":"ease",
+        "name": "Michael Smith",
+        "designation": "CEO of Golden Sands Resort",
+        "contact": "+1 (987) 654-3210",
+        "email": "michael@gmail.com",
+        "hotel_name": "Golden Sands Resort",
+        "img": "https://i.ibb.co/0hjdnvY/677.jpg"
+      },
+      {
+        "duration":"1000",
+        "delay":"500",
+        "animation":"fade-right",
+        "easing":"ease",
+        "name": "Sophia Brown",
+        "designation": "CEO of Mountain View Lodge",
+        "contact": "+1 (555) 123-4567",
+        "email": "sophia@gmail.com",
+        "hotel_name": "Mountain View Lodge",
+        "img": "https://i.ibb.co/QfTtjYf/2148112827.jpg"
+      },
+      {
+        "duration":"1000",
+        "delay":"0",
+        "easing":"ease",
+        "animation":"fade-right",
+        "name": "Daniel Wilson",
+        "designation": "CEO of Palm Grove Motel",
+        "contact": "+1 (222) 333-4444",
+        "email": "daniel@gmail.com",
+        "motel_name": "Palm Grove Motel",
+        "img": "https://i.ibb.co/Y7qc18m/5893.jpg"
+      },
+      {
+        "duration":"1000",
+        "delay":"300",
+        "animation":"fade-right",
+        "easing":"ease",
+        "name": "Emma Davis",
+        "designation": "CEO of Ocean Breeze Inn",
+        "contact": "+1 (333) 444-5555",
+        "email": "emma@gmail.com",
+        "motel_name": "Ocean Breeze Inn",
+        "img": "https://i.ibb.co/r6YWzMT/2147708516.jpg"
+      },
+      {
+        "duration":"1000",
+        "delay":"500",
+        "animation":"fade-right",
+        "easing":"ease",
+        "name": "William Taylor",
+        "designation": "CEO of Riverside Lodge",
+        "contact": "+1 (444) 555-6666",
+        "email": "william@gmail.com",
+        "motel_name": "Riverside Lodge",
+        "img": "https://i.ibb.co/jVKXzd9/2148113003.jpg"
+      },
+      { 
+        "duration":"1000",
+      "delay":"0",
+      "animation":"fade-right",
+      "easing":"ease",
+        "name": "Olivia Martinez",
+        "designation": "CEO of  Tranquil Haven Guesthouse",
+        "contact": "+1 (555) 666-7777",
+        "email": "olivia@gmail.com",
+        "guesthouse_name": "Tranquil Haven Guesthouse",
+        "img": "https://i.ibb.co/txtGXc6/2148479524.jpg"
+      },
+      { 
+        "duration":"1000",
+      "delay":"300",
+      "animation":"fade-right",
+      "easing":"ease",
+        "name": "Ethan Clark",
+        "designation": "CEO of Forest Retreat Guesthouse",
+        "contact": "+1 (777) 888-9999",
+        "email": "ethan@gmail.com",
+        "guesthouse_name": "Forest Retreat Guesthouse",
+        "img": "https://i.ibb.co/Gvv1v2Z/2148763859.jpg"
+      },
+      { 
+        "duration":"1000",
+      "delay":"500",
+      "animation":"fade-right",
+      "easing":"ease",
+        "name": "Ava Rodriguez",
+        "designation": "CEO of  Harbor View Guesthouse",
+        "contact": "+1 (999) 888-7777",
+        "email": "ava@gmail.com",
+        "guesthouse_name": "Harbor View Guesthouse",
+        "img": "https://i.ibb.co/0JFKq2n/hotel-owner3.jpg"
+      },
+      {
+         "duration":"1000",
+      "delay":"300",
+      "animation":"fade-right",
+      "easing":"ease",
+        "name": "Noah Garcia",
+        "designation": "CEO of Azure Springs Resort",
+        "contact": "+1 (777) 999-8888",
+        "email": "noah@gmail.com",
+        "resort_name": "Azure Springs Resort",
+        "img": "https://i.ibb.co/2s7KpmG/hotel-owner1.jpg"
+      },
+      { 
+        "duration":"1000",
+      "delay":"0",
+      "animation":"fade-right",
+      "easing":"ease",
+        "name": "Mia Hernandez",
+        "designation": "CEO of Serenity Cove Resort",
+        "contact": "+1 (888) 777-6666",
+        "email": "mia@gmail.com",
+        "resort_name": "Serenity Cove Resort",
+        "img": "https://i.ibb.co/dMxcTTR/hotel-owner.jpg"
+      }
+    ]
+
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
