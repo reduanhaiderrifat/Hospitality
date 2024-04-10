@@ -7,7 +7,7 @@ import { FaEye, FaEyeSlash, FaPhotoVideo, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { cteateUser, handleGoogle } = useContext(AuthContext);
+  const { cteateUser, handleGoogle, handleTwitter } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [passwordError, setpasswordError] = useState("");
   const [succes, setSuccess] = useState("");
@@ -68,7 +68,7 @@ const Register = () => {
           <FcGoogle size={30} />
           Login with Google
         </a>
-        <a className="btn mx-auto w-1/3">
+        <a onClick={handleTwitter} className="btn mx-auto w-1/3">
           <FaTwitter size={30} className="text-blue-500" />
           Login with Twitter
         </a>

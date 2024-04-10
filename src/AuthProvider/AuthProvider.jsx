@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
   GoogleAuthProvider,
+  TwitterAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -14,8 +15,12 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
+  const twitterProvider = new TwitterAuthProvider();
   const handleGoogle = () => {
     signInWithPopup(auth, googleProvider);
+  };
+  const handleTwitter = () => {
+    signInWithPopup(auth, twitterProvider);
   };
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -35,6 +40,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     loading,
     handleGoogle,
+    handleTwitter,
   };
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {
