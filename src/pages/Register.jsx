@@ -7,13 +7,15 @@ import { FaEye, FaEyeSlash, FaPhotoVideo, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { cteateUser, handleGoogle, handleTwitter } = useContext(AuthContext);
+  const { cteateUser, handleGoogle, handleTwitter, unpdateUser } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
   const [passwordError, setpasswordError] = useState("");
   const [succes, setSuccess] = useState("");
   const [accept, setAccept] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -21,7 +23,8 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    const { email, password, confirmPassword, checkbox } = data;
+    const { email, password, confirmPassword, checkbox, username, photo } =
+      data;
     setSuccess("");
     setError("");
     setpasswordError("");
@@ -50,8 +53,8 @@ const Register = () => {
       return;
     }
     cteateUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        unpdateUser(username, photo).then(() => {});
         toast.success("User create successfully!");
         setSuccess("User create successfully!");
       })

@@ -6,20 +6,15 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Owner from "../components/Owner";
-// import { useNavigation } from "react-router-dom";
+
 const Home = () => {
   const [owners, setOwners] = useState([]);
 
-  console.log(owners);
   useEffect(() => {
     fetch("owner.json")
       .then((res) => res.json())
       .then((data) => setOwners(data));
   }, []);
-  // const navigation = useNavigation();
-  // if (navigation.state === "loading") {
-  //   return <span className="loading loading-spinner loading-lg"></span>;
-  // }
 
   return (
     <div className="">

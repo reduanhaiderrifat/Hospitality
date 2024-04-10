@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import auth from "../Firebase.config";
 export const AuthContext = createContext(null);
@@ -25,6 +26,12 @@ const AuthProvider = ({ children }) => {
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
+  const unpdateUser = (username, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: username,
+      photoURL: photo,
+    });
+  };
   const singInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -41,6 +48,7 @@ const AuthProvider = ({ children }) => {
     loading,
     handleGoogle,
     handleTwitter,
+    unpdateUser,
   };
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {

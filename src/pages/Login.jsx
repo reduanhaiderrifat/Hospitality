@@ -5,11 +5,11 @@ import { FaEye, FaEyeSlash, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const { singInUser, handleGoogle, handleTwitter } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate();
   const [succes, setSuccess] = useState("");
   const {
     register,
@@ -22,10 +22,10 @@ const Login = () => {
     setSuccess("");
 
     singInUser(email, password)
-      .then((result) => {
+      .then(() => {
         setSuccess("Login successfully");
         toast.success("Login successfully");
-        console.log(result.user);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

@@ -1,18 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-
+import toast, { Toaster } from "react-hot-toast";
+import { CiLogin } from "react-icons/ci";
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
-
+  const [error, setError] = useState("");
   const handllogout = () => {
     logOut()
       .then(() => {
-        console.log("logout successfully");
+        toast.success("logout successfully");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
+  };
+  const handleRefresh = () => {
+    window.location.reload();
   };
   return (
     <div>
@@ -221,7 +225,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Hospitality</a>
+          <a
+            onClick={handleRefresh}
+            className="btn btn-ghost font-medium  text-xl md:text-2xl lg:text-3xl"
+          >
+            Hospitality
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -416,7 +425,10 @@ const Navbar = () => {
                 className="hover:bg-transparent   m-1"
               >
                 <img
-                  src={user?.photoURL}
+                  src={
+                    user?.photoURL ||
+                    "https://i.ibb.co/R3SSpJQ/145856997-296fe121-5dfa-43f4-98b5-db50019738a7.jpg"
+                  }
                   alt=""
                   className="w-12 h-12 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                 />
@@ -427,19 +439,25 @@ const Navbar = () => {
               >
                 <div className="flex flex-col bg-white shadow-lg justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
                   <img
-                    src={user?.photoURL}
+                    src={
+                      user?.photoURL ||
+                      "https://i.ibb.co/R3SSpJQ/145856997-296fe121-5dfa-43f4-98b5-db50019738a7.jpg"
+                    }
                     alt=""
                     className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                   />
-                  <div className="space-y-3 text-center divide-y dark:divide-gray-300">
+                  <div className="space-y-3  divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                       <h2 className="text-xl font-semibold sm:text-2xl">
-                        {user?.displayName}
+                        {user?.displayName || "user name undefind"}
                       </h2>
+                      <p>{user?.email || "email not add"}</p>
                     </div>
                     <a onClick={handllogout} className="btn">
-                      Logout
+                      <CiLogin size={30} /> Logout
                     </a>
+                    <span className="text-red-500">{error}</span>
+                    <Toaster />
                   </div>
                 </div>
               </ul>
@@ -460,8 +478,6 @@ const Navbar = () => {
               </Link>
             </>
           )}
-
-          {/*  */}
         </div>
       </div>
     </div>
