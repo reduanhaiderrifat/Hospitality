@@ -49,11 +49,11 @@ const Navbar = () => {
       style={{
         backgroundImage: "url(https://i.ibb.co/D4KZfqZ/navbar.jpg)",
       }}
-      className="h-[267px] md:h-[358px] lg:h-[382px]  bg-no-repeat relative object-cover bg-contain "
+      className="h-[267px] md:h-[358px] lg:h-[382px] border bg-no-repeat relative mx-auto  object-contain bg-contain w-full "
     >
       <h2 className=" absolute left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
         Welcome Our <span className="text-[#e0bb17f5] ">resort</span>
-      </h2>
+      </h2>{" "}
       <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown dropdown-hover z-10">
@@ -446,7 +446,6 @@ const Navbar = () => {
                   <li>
                     <NavLink
                       to="/about"
-                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -463,7 +462,6 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/terms"
-                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -480,7 +478,6 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/contact"
-                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
