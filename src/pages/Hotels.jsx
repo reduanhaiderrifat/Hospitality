@@ -19,45 +19,46 @@ const Hotels = () => {
             data-aos-delay="1000"
             className="text-orange-500"
           >
-            Guest-House
+            Hotel
           </p>
         </h2>
         <span>
           <p data-aos="fade-left" data-aos-duration="2000">
-            Upon stepping into this charming guesthouse, one is immediately
-            greeted by an ambiance of warmth and comfort. Nestled amidst lush
-            greenery, this
+            Nestled amidst the bustling streets of [City Name], the [Hotel Name]
+            stands tall as a beacon of elegance and luxury. From the moment you
+            step into the
           </p>
           <p
             data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-delay="600"
           >
-            quaint retreat offers a perfect blend of modern amenities and rustic
-            charm, making it an ideal escape from the hustle and bustle of
-            everyday life.
+            grand lobby, you're greeted with an atmosphere of refined
+            sophistication.The check-in process was seamless, with the staff
+            displaying warmth and
           </p>
           <p
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay="1200"
           >
-            The exterior exudes a welcoming charm with its traditional
-            architecture adorned with flowering vines, inviting guests to
-            explore the serene surroundings. As
+            professionalism that set the tone for the entire stay. Upon entering
+            the room, I was immediately struck by the meticulous attention to
+            detail.
           </p>
           <p
             data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-delay="1800"
           >
-            you step inside, the interior unfolds with tasteful décor and cozy
-            furnishings, creating an inviting atmosphere for relaxation and
-            rejuvenation.
+            The decor exuded modern charm, with plush furnishings and tasteful
+            accents creating a cozy yet upscale ambiance.One of the highlights
+            of my stay was
           </p>
           <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2400">
-            The guesthouse features well-appointed bedrooms, each thoughtfully
-            designed to provide utmost comfort and tranquility.
+            undoubtedly the breathtaking view from my room.The hotel's amenities
+            left nothing to be desired.Dining at the hotel was a culinary
+            delight.
           </p>
         </span>
       </div>

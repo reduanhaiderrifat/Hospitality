@@ -1,0 +1,25 @@
+[
+    {
+       "to":"/hotels",
+      "icon": "https://i.ibb.co/Gnpbhw6/Hotel-5-Star.png",
+      "description": "Luxurious seaside escape with panoramic views and world-class amenities."
+    },
+    {
+      "to":"/motels",
+      "icon": "https://i.ibb.co/y0Kcdmc/Motel-logo.png",
+      "description": "Quirky vintage charm meets modern comfort for budget-conscious travelers."
+    },
+    {
+      "to":"/guesthouse",
+      "icon": "https://i.ibb.co/HFrVnnR/Guesthouse-logo.png",
+      "description": "Peaceful hideaway nestled in nature, offering cozy accommodations and warm hospitality."
+    },
+    {
+      "to":"/resort",
+      "icon": "https://i.ibb.co/4jcWrSN/Resort-logo.png",
+      "description": "Indulge in luxury amidst palm-fringed beaches and lush tropical landscapes."
+    }
+  ]
+  
+
+

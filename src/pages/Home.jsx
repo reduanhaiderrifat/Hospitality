@@ -6,6 +6,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Owner from "../components/Owner";
+import Estate from "../components/Estate";
 
 const Home = () => {
   const [owners, setOwners] = useState([]);
@@ -311,15 +312,19 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      <div className="">
+        <Estate></Estate>
+      </div>
       <div className="text-center my-8">
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"
           className="text-4xl font-bold"
         >
-          Owner
+          <span className=" text-orange-500"> Owner</span> of Property
         </h2>
       </div>
+
       <div className="grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3">
         {owners.map((owner, idx) => (
           <Owner key={idx} owner={owner}></Owner>

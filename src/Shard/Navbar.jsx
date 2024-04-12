@@ -411,8 +411,8 @@ const Navbar = () => {
                     return {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
-                      border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "",
+                      border: isActive ? "1px solid #f5cd48" : "",
+                      color: isActive ? "#f5cd48" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -429,8 +429,8 @@ const Navbar = () => {
                     return {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
-                      border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "",
+                      border: isActive ? "1px solid #f5cd48" : "",
+                      color: isActive ? "#f5cd48" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}

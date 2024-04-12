@@ -17,27 +17,40 @@ const UpdateProfile = () => {
     window.location.reload();
   };
   return (
-    <div className="flex h-screen md:h-screen lg:h-[calc(100vh-276px)] justify-center items-center flex-col">
-      <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex  h-screen md:h-screen lg:h-[calc(100vh-276px)] justify-center items-center flex-col">
+      <div className="flex flex-col justify-center max-w-xs p-6 shadow-2xl bg-sky-200 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           src={user?.photoURL}
           alt=""
           className="w-44 h-44 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />
         <div className="space-y-4 text-center divide-y dark:divide-gray-300">
           <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">
+            <h2
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+              className="text-xl font-semibold sm:text-2xl"
+            >
               {user?.displayName}
             </h2>
           </div>
         </div>
 
         <button
-          className="btn"
+          className="btn bg-sky-400 hover:bg-sky-600"
           onClick={() => document.getElementById("my_modal_5").showModal()}
         >
-          <FaEdit size={30} />
+          <FaEdit
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+            size={30}
+          />
         </button>
+
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
           <div className="modal-box">
             <h2 className="text-center mb-3 text-3xl font-bold">

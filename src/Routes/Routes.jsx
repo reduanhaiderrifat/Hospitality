@@ -18,6 +18,7 @@ import ResortDetail from "../components/Resort/ResortDetail";
 import Booking from "../components/Booking";
 import GuestHouseDetails from "../components/GuestHouseCard/GuestHouseDetails";
 import HotelDetails from "../components/Hotel/HotelDetails";
+import MotelDetails from "../components/Motel/MotelDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,16 @@ const router = createBrowserRouter([
       {
         path: "/motels",
         element: <Motels></Motels>,
+        loader: () => fetch("/motel.json"),
+      },
+      {
+        path: "/motel/:id",
+        element: (
+          <PrivetRouter>
+            <MotelDetails></MotelDetails>
+          </PrivetRouter>
+        ),
+        loader: () => fetch("/motel.json"),
       },
       {
         path: "/resort",

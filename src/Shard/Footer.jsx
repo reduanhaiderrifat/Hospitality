@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="px-4 bg-[#010313] text-white divide-y dark:bg-gray-100 dark:text-gray-800">
@@ -119,36 +121,36 @@ const Footer = () => {
                 data-aos-delay="1600"
                 data-aos-duration="1000"
               >
-                <a rel="noopener noreferrer" href="#">
+                <Link to="/hotels" rel="noopener noreferrer">
                   Hotel
-                </a>
+                </Link>
               </li>
               <li
                 data-aos="fade-up"
                 data-aos-delay="1400"
                 data-aos-duration="1000"
               >
-                <a rel="noopener noreferrer" href="#">
+                <Link to="/motels" rel="noopener noreferrer">
                   Motel
-                </a>
+                </Link>
               </li>
               <li
                 data-aos="fade-up"
                 data-aos-delay="1200"
                 data-aos-duration="1000"
               >
-                <a rel="noopener noreferrer" href="#">
+                <Link to="/guesthouse" rel="noopener noreferrer">
                   GuestHouse
-                </a>
+                </Link>
               </li>
               <li
                 data-aos="fade-up"
                 data-aos-delay="1000"
                 data-aos-duration="1000"
               >
-                <a rel="noopener noreferrer" href="#">
+                <Link to="/resort" rel="noopener noreferrer">
                   Resort
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
