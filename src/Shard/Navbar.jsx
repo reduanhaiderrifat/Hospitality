@@ -103,6 +103,7 @@ const Navbar = () => {
                   <li>
                     <NavLink
                       to="/hotels"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -119,6 +120,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
+                      target="_blank"
                       to="/motels"
                       style={({ isActive, isTransitioning }) => {
                         return {
@@ -135,6 +137,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
+                      target="_blank"
                       to="/guesthouse"
                       style={({ isActive, isTransitioning }) => {
                         return {
@@ -151,6 +154,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
+                      target="_blank"
                       to="/resort"
                       style={({ isActive, isTransitioning }) => {
                         return {

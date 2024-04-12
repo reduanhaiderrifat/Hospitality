@@ -3,7 +3,7 @@ import { FaMapLocationDot, FaMoneyCheckDollar } from "react-icons/fa6";
 import { MdCategory } from "react-icons/md";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 
-const BookingCard = ({ resort, handleDelete }) => {
+const BookingCard = ({ booking, handleDelete }) => {
   const {
     image,
     title,
@@ -14,7 +14,7 @@ const BookingCard = ({ resort, handleDelete }) => {
     location,
     id,
     type,
-  } = resort;
+  } = booking;
 
   return (
     <div>
@@ -72,7 +72,7 @@ const BookingCard = ({ resort, handleDelete }) => {
   );
 };
 BookingCard.propTypes = {
-  resort: Proptypes.object.isRequired,
+  booking: Proptypes.object.isRequired,
   handleDelete: Proptypes.func.isRequired,
 };
 export default BookingCard;

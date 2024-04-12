@@ -1,9 +1,8 @@
-import Proptypes from "prop-types";
-
 import { MdOutlineStar, MdStarHalf } from "react-icons/md";
 import { Link } from "react-router-dom";
-const ResortCard = ({ resort, index }) => {
-  const { title, image, status, rating, segment_name, id } = resort;
+import Proptypes from "prop-types";
+const GuestHouseCard = ({ house, index }) => {
+  const { title, image, status, rating, segment_name, id } = house;
   return (
     <div>
       <div
@@ -38,7 +37,7 @@ const ResortCard = ({ resort, index }) => {
             </div>
           </div>
           <Link
-            to={`/resort/${id}`}
+            to={`/guesthouse/${id}`}
             className="flex  btn bg-sky-400 hover:bg-green-600 items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"
           >
             Veiw Property
@@ -48,9 +47,8 @@ const ResortCard = ({ resort, index }) => {
     </div>
   );
 };
-
-ResortCard.propTypes = {
-  resort: Proptypes.object.isRequired,
+GuestHouseCard.propTypes = {
+  house: Proptypes.object.isRequired,
   index: Proptypes.any.isRequired,
 };
-export default ResortCard;
+export default GuestHouseCard;

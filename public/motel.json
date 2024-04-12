@@ -1,0 +1,102 @@
+[
+    {
+        "image": "https://i.ibb.co/L92RHXT/MOTEL1.jpg",
+        "title": "Coastal Breeze Motel",
+        "id": "MOT001",
+        "segment_name": "Seaside",
+        "description": "Experience the refreshing coastal breeze at Coastal Breeze Motel. Located just steps away from the beach, this charming motel offers comfortable accommodations with a seaside vibe. Relax in cozy rooms decorated with nautical accents, and enjoy easy access to the sand and surf. Whether you're lounging on the beach or exploring the nearby boardwalk attractions, Coastal Breeze Motel provides the perfect base for your coastal getaway.",
+        "price": "$500,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "Seaside Town",
+        "facilities": ["Beach access", "Cozy rooms", "Boardwalk nearby"],
+        "rating": 4.2
+    },
+    {
+        "image": "https://i.ibb.co/z4xHMC0/MOTEL.jpg",
+        "title": "Mountain View Motel",
+        "id": "MOT002",
+        "segment_name": "Scenic",
+        "description": "Enjoy breathtaking mountain views at Mountain View Motel. Nestled in the heart of the mountains, this quaint motel offers cozy rooms with panoramic vistas. Wake up to the sight of snow-capped peaks or lush green valleys, and spend your days exploring the scenic wonders of the region. Whether you're hiking through alpine meadows or simply relaxing on the motel's terrace, Mountain View Motel provides a tranquil escape amidst nature's beauty.",
+        "price": "$400,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "Mountain Valley",
+        "facilities": ["Scenic views", "Cozy rooms", "Terrace"],
+        "rating": 4.0
+    },
+    {
+        "image": "https://i.ibb.co/tX18tWb/motel-4.jpg",
+        "title": "Desert Mirage Motel",
+        "id": "MOT003",
+        "segment_name": "Desert",
+        "description": "Experience the magic of the desert at Desert Mirage Motel. Located amidst vast sand dunes, this unique motel offers comfortable accommodations with a desert twist. Stay in cozy adobe-style rooms adorned with traditional décor, and immerse yourself in the mystical atmosphere of the desert. Whether you're embarking on a desert safari or simply gazing at the starry night sky, Desert Mirage Motel provides an unforgettable desert experience.",
+        "price": "$450,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1300 sq ft",
+        "location": "Desert Oasis",
+        "facilities": ["Desert views", "Adobe-style rooms", "Desert safari tours"],
+        "rating": 4.3
+    },
+    {
+        "image": "https://i.ibb.co/vk4fgs3/MOTEL2.jpg",
+        "title": "Forest Retreat Motel",
+        "id": "MOT004",
+        "segment_name": "Woodland",
+        "description": "Escape to the tranquility of the forest at Forest Retreat Motel. Surrounded by towering trees and lush foliage, this peaceful motel offers comfortable accommodations in a woodland setting. Stay in cozy cabins nestled among the trees, and enjoy the sounds of nature from your doorstep. Whether you're hiking through the forest trails or simply unwinding on your cabin's porch, Forest Retreat Motel provides a serene retreat for nature lovers.",
+        "price": "$550,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "Forest Haven",
+        "facilities": ["Woodland views", "Cozy cabins", "Forest trails nearby"],
+        "rating": 4.5
+    },
+    {
+        "image": "https://i.ibb.co/JnwHF0T/MOTEL-5.jpg",
+        "title": "Lakeside Serenity Motel",
+        "id": "MOT005",
+        "segment_name": "Lakefront",
+        "description": "Discover lakeside serenity at Lakeside Serenity Motel. Located on the shores of a tranquil lake, this charming motel offers comfortable accommodations with picturesque views. Relax in cozy rooms overlooking the water, and spend your days fishing off the dock or exploring the surrounding nature trails. Whether you're enjoying a lakeside picnic or watching the sunset from your room, Lakeside Serenity Motel provides the perfect retreat for a peaceful lakeside getaway.",
+        "price": "$600,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1700 sq ft",
+        "location": "Lakeside Retreat",
+        "facilities": ["Lakefront views", "Cozy rooms", "Fishing dock"],
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.ibb.co/XLwV1hY/MOTEL-8.jpg",
+        "title": "Urban Oasis Motel",
+        "id": "MOT006",
+        "segment_name": "City",
+        "description": "Escape the hustle and bustle of the city at Urban Oasis Motel. Situated in a quiet neighborhood, this modern motel offers comfortable accommodations with easy access to urban attractions. Stay in stylish rooms equipped with all the amenities you need for a relaxing stay, and explore the nearby shops, restaurants, and cultural landmarks. Whether you're visiting for business or pleasure, Urban Oasis Motel provides a peaceful retreat in the heart of the city.",
+        "price": "$700,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1900 sq ft",
+        "location": "City Center",
+        "facilities": ["City views", "Stylish rooms", "Nearby attractions"],
+        "rating": 4.4
+    },
+    {
+        "image": "https://i.ibb.co/wC6DX0h/MOTEL-7.jpg",
+        "title": "Riverside Haven Motel",
+        "id": "MOT007",
+        "segment_name": "Riverside",
+        "description": "Experience riverside tranquility at Riverside Haven Motel. Nestled along the banks of a peaceful river, this charming motel offers comfortable accommodations with scenic views. Stay in cozy rooms overlooking the water, and spend your days fishing, kayaking, or simply relaxing on the riverside deck. Whether you're seeking adventure or relaxation, Riverside Haven Motel provides the perfect retreat for a serene riverside escape.",
+        "price": "$550,000",
+        "type": "motel",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "Riverside",
+        "facilities": ["Riverside views", "Cozy rooms", "Fishing", "Kayaking"],
+        "rating": 4.6
+    }
+]
+
+

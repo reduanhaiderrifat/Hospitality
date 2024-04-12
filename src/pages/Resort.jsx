@@ -6,7 +6,7 @@ const Resort = () => {
   return (
     <>
       <div className="text-center mx-auto space-y-2 my-4">
-        <h2 className=" text-4xl font-black flex gap-1 justify-center">
+        <h2 className=" text-4xl font-black flex gap-1 mb-3  justify-center">
           <p data-aos="fade-down" data-aos-duration="1000">
             Welcome Our
           </p>

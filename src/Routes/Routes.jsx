@@ -16,6 +16,8 @@ import UpdateProfile from "../pages/UpdateProfile";
 import PrivetRouter from "../privetRoute/PrivetRouter";
 import ResortDetail from "../components/Resort/ResortDetail";
 import Booking from "../components/Booking";
+import GuestHouseDetails from "../components/GuestHouseCard/GuestHouseDetails";
+import HotelDetails from "../components/Hotel/HotelDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,8 +29,18 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
+        path: "/hotel/:id",
+        element: (
+          <PrivetRouter>
+            <HotelDetails></HotelDetails>
+          </PrivetRouter>
+        ),
+        loader: () => fetch("/hotel.json"),
+      },
+      {
         path: "/hotels",
         element: <Hotels></Hotels>,
+        loader: () => fetch("/hotel.json"),
       },
       {
         path: "/motels",
@@ -51,6 +63,16 @@ const router = createBrowserRouter([
       {
         path: "/guesthouse",
         element: <GuestHouse></GuestHouse>,
+        loader: () => fetch("/guesthouse.json"),
+      },
+      {
+        path: "/guesthouse/:id",
+        element: (
+          <PrivetRouter>
+            <GuestHouseDetails></GuestHouseDetails>
+          </PrivetRouter>
+        ),
+        loader: () => fetch("/guesthouse.json"),
       },
       {
         path: "/booking",
