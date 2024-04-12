@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { SiInstatus } from "react-icons/si";
+import { setData } from "../../utils";
 const ResortDetail = () => {
   const navigate = useNavigate();
   const details = useLoaderData();
@@ -26,6 +27,9 @@ const ResortDetail = () => {
   } = detailed;
   const handleBack = () => {
     navigate(-1);
+  };
+  const handleBooking = (detailed) => {
+    setData(detailed);
   };
   return (
     <div>
@@ -107,7 +111,7 @@ const ResortDetail = () => {
             <div className="flex gap-5 md:mr-4">
               <div>
                 <button
-                  // onClick={() => handleRead(book)}
+                  onClick={() => handleBooking(detailed)}
                   className="btn  hover:text-white hover:bg-[#46ad31]  border-[#46ad31]
                text-black"
                 >

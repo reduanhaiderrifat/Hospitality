@@ -1,0 +1,91 @@
+[
+    {
+        "image": "https://i.ibb.co/jLw8kw1/guest-House5.jpg",
+        "title": "Coastal Cottage Guest House",
+        "id": "GH001",
+        "segment_name": "Seaside Retreat",
+        "description": "Escape to the coast at Coastal Cottage Guest House. Nestled along the shoreline, this charming cottage offers stunning ocean views and a cozy atmosphere. Relax on the private deck overlooking the waves, or take a leisurely stroll along the sandy beach. The spacious guest house features coastal-inspired décor and modern amenities for a comfortable stay. Whether you're seeking relaxation or adventure, Coastal Cottage Guest House provides the perfect coastal retreat.",
+        "price": "$200 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "1200 sq ft",
+        "location": "Coastal Town",
+        "facilities": ["Private deck with ocean views", "Beach access", "Cozy interiors", "Modern amenities"],
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.ibb.co/Gtb7ksn/guest-House4.jpg",
+        "title": "Mountain View Guest Lodge",
+        "id": "GH002",
+        "segment_name": "Scenic Getaway",
+        "description": "Experience the beauty of the mountains at Mountain View Guest Lodge. Situated amidst lush greenery and majestic peaks, this cozy lodge offers a serene retreat away from the hustle and bustle of city life. Relax on the veranda and soak in panoramic mountain views, or explore nearby hiking trails for an outdoor adventure. The rustic yet comfortable guest rooms provide a peaceful sanctuary after a day of exploration. With its scenic surroundings and tranquil atmosphere, Mountain View Guest Lodge is the perfect destination for nature lovers.",
+        "price": "$150 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "1000 sq ft",
+        "location": "Mountain Valley",
+        "facilities": ["Veranda with mountain views", "Hiking trails nearby", "Rustic yet comfortable rooms", "Tranquil atmosphere"],
+        "rating": 4.5
+    },
+    {
+        "image": "https://i.ibb.co/5xtBjyg/guest-House3.jpg",
+        "title": "Riverside Retreat Guest House",
+        "id": "GH003",
+        "segment_name": "Waterfront Haven",
+        "description": "Relax by the riverside at Riverside Retreat Guest House. Surrounded by lush foliage and the gentle sounds of the river, this quaint guest house offers a peaceful escape from the everyday hustle. Enjoy birdwatching from the riverside deck, or take a kayak out on the water for a scenic adventure. The cozy guest rooms feature charming décor and modern amenities for a comfortable stay. Whether you're seeking relaxation or outdoor exploration, Riverside Retreat Guest House offers the perfect waterfront retreat.",
+        "price": "$180 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "900 sq ft",
+        "location": "Riverside",
+        "facilities": ["Riverside deck", "Kayak rentals", "Charming guest rooms", "Tranquil atmosphere"],
+        "rating": 4.6
+    },
+    {
+        "image": "https://i.ibb.co/kmWTXGt/guest-House2.jpg",
+        "title": "Forest Haven Guest Cabin",
+        "id": "GH004",
+        "segment_name": "Woodland Retreat",
+        "description": "Immerse yourself in nature at Forest Haven Guest Cabin. Tucked away in the heart of the forest, this cozy cabin offers a secluded retreat surrounded by towering trees and peaceful wilderness. Relax on the porch and listen to the sounds of the forest, or venture out to explore hiking trails and wildlife spotting opportunities. The rustic yet charming cabin interiors provide a cozy haven after a day of outdoor adventures. With its tranquil setting and natural beauty, Forest Haven Guest Cabin is the perfect woodland retreat.",
+        "price": "$160 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "800 sq ft",
+        "location": "Forest Reserve",
+        "facilities": ["Secluded porch", "Hiking trails nearby", "Rustic cabin interiors", "Tranquil setting"],
+        "rating": 4.4
+    },
+    {
+        "image": "https://i.ibb.co/pLDrhYV/gues-House1.jpg",
+        "title": "Lakefront Lodge Guest House",
+        "id": "GH005",
+        "segment_name": "Lakeside Haven",
+        "description": "Enjoy lakeside living at Lakefront Lodge Guest House. Situated on the shores of a picturesque lake, this charming lodge offers breathtaking views and a tranquil atmosphere. Spend your days fishing off the dock, kayaking on the crystal-clear waters, or simply lounging in the lakeside hammocks. The cozy guest rooms feature rustic décor and modern amenities for a comfortable stay. Whether you're seeking outdoor adventure or relaxation, Lakefront Lodge Guest House offers the perfect lakeside retreat.",
+        "price": "$220 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "1100 sq ft",
+        "location": "Lakefront",
+        "facilities": ["Lakefront deck", "Fishing dock", "Kayak rentals", "Rustic yet comfortable rooms"],
+        "rating": 4.8
+    },
+    {
+        "image": "https://i.ibb.co/1dfQptQ/guest-House.jpg",
+        "title": "Hilltop Haven Guest House",
+        "id": "GH006",
+        "segment_name": "Scenic Retreat",
+        "description": "Experience panoramic views at Hilltop Haven Guest House. Perched atop a scenic hill, this charming guest house offers breathtaking vistas of the surrounding countryside. Relax on the spacious terrace and soak in the beauty of nature, or explore nearby hiking trails for an outdoor adventure. The cozy guest rooms feature rustic yet elegant décor and modern amenities for a comfortable stay. Whether you're seeking relaxation or exploration, Hilltop Haven Guest House provides the perfect scenic retreat.",
+        "price": "$190 per night",
+        "status": "rent",
+        "type": "guest house",
+        "area": "950 sq ft",
+        "location": "Hilltop",
+        "facilities": ["Spacious terrace with panoramic views", "Hiking trails nearby", "Rustic yet elegant rooms", "Tranquil atmosphere"],
+        "rating": 4.7
+    }
+]
+
+
+
+
+

@@ -6,6 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { CiLogin } from "react-icons/ci";
 import logo from "../../public/icon.webp";
 import { FaPhotoVideo, FaEdit } from "react-icons/fa";
+import { IoMdRefreshCircle } from "react-icons/io";
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const { logOut, user, updateUser } = useContext(AuthContext);
@@ -184,22 +185,24 @@ const Navbar = () => {
                   </NavLink>
                 </li>
               )}
-              <li>
-                <NavLink
-                  to="/booking"
-                  style={({ isActive, isTransitioning }) => {
-                    return {
-                      fontWeight: isActive ? "bold" : "",
-                      backgroundColor: isActive ? "transparent" : "",
-                      border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "",
-                      viewTransitionName: isTransitioning ? "slide" : "",
-                    };
-                  }}
-                >
-                  Booking
-                </NavLink>
-              </li>
+              {user && (
+                <li>
+                  <NavLink
+                    to="/booking"
+                    style={({ isActive, isTransitioning }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        backgroundColor: isActive ? "transparent" : "",
+                        border: isActive ? "1px solid #23BE0A" : "",
+                        color: isActive ? "#23BE0A" : "",
+                        viewTransitionName: isTransitioning ? "slide" : "",
+                      };
+                    }}
+                  >
+                    Booking
+                  </NavLink>
+                </li>
+              )}
               <li>
                 <NavLink
                   to="/about"
@@ -328,6 +331,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/hotels"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -344,6 +348,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/motels"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -360,6 +365,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/guesthouse"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -376,6 +382,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/resort"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -435,6 +442,7 @@ const Navbar = () => {
                   <li>
                     <NavLink
                       to="/about"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -451,6 +459,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/terms"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -467,6 +476,7 @@ const Navbar = () => {
                   <li className=" font-bold">
                     <NavLink
                       to="/contact"
+                      target="_blank"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
@@ -562,47 +572,59 @@ const Navbar = () => {
                     alt=""
                     className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                   />
-                  <details className="dropdown">
-                    <summary className="m-1 btn">
-                      <FaEdit size={25} />
-                    </summary>
+                  <div className="flex items-center justify-between">
+                    <details className="dropdown">
+                      <summary className="m-1 btn">
+                        <FaEdit size={25} />
+                      </summary>
 
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-72">
-                      <form onSubmit={handleUpdateProfile}>
-                        <label className="input input-bordered mb-4 flex items-center gap-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            className="w-4 h-4 text-black opacity-70"
-                          >
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-                          </svg>
+                      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-72">
+                        <form onSubmit={handleUpdateProfile}>
+                          <label className="input input-bordered mb-4 flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="currentColor"
+                              className="w-4 h-4 text-black opacity-70"
+                            >
+                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                            </svg>
 
-                          <input
-                            type="text"
-                            name="username"
-                            className="grow text-black"
-                            placeholder="Username"
-                          />
-                        </label>
-                        <label className="input input-bordered mb-4 flex items-center gap-2">
-                          <FaPhotoVideo size={20} color="black" />
-                          <input
-                            type="text"
-                            name="photo"
-                            className="grow text-black"
-                            placeholder="Photo_URL"
-                          />
-                        </label>
-                        <label>
-                          <button className="btn w-full hover:bg-transparent hover:text-black text-white bg-green-500 font-bold">
-                            Update
-                          </button>
-                        </label>
-                      </form>
-                    </ul>
-                  </details>
+                            <input
+                              type="text"
+                              name="username"
+                              className="grow text-black"
+                              placeholder="Username"
+                            />
+                          </label>
+                          <label className="input input-bordered mb-4 flex items-center gap-2">
+                            <FaPhotoVideo size={20} color="black" />
+                            <input
+                              type="text"
+                              name="photo"
+                              className="grow text-black"
+                              placeholder="Photo_URL"
+                            />
+                          </label>
+                          <label>
+                            <button className="btn w-full hover:bg-transparent hover:text-black text-white bg-green-500 font-bold">
+                              Update
+                            </button>
+                          </label>
+                        </form>
+                      </ul>
+                    </details>
+
+                    <button
+                      onClick={handleRefresh}
+                      className="btn rounded-full"
+                    >
+                      <IoMdRefreshCircle size={30} />
+                    </button>
+                  </div>
+                  <p className="text-xs text-end">
+                    Refresh for update profile!
+                  </p>
                   <div className="space-y-3  divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                       <h2 className="text-xl font-semibold sm:text-2xl">
