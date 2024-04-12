@@ -2,7 +2,7 @@
       {
         "duration":"1000",
         "delay":"0",
-        "animation":"fade-right",
+        "animation":"fade-up",
          "easing":"ease",
         "name": "Emily Johnson",
         "designation": "CEO of Sunset Bay Hotel",
@@ -14,7 +14,7 @@
       {
         "duration":"1000",
         "delay":"300",
-        "animation":"fade-right",
+        "animation":"fade-up",
         "easing":"ease",
         "name": "Michael Smith",
         "designation": "CEO of Golden Sands Resort",
@@ -26,7 +26,7 @@
       {
         "duration":"1000",
         "delay":"500",
-        "animation":"fade-right",
+        "animation":"fade-up",
         "easing":"ease",
         "name": "Sophia Brown",
         "designation": "CEO of Mountain View Lodge",
@@ -39,7 +39,7 @@
         "duration":"1000",
         "delay":"0",
         "easing":"ease",
-        "animation":"fade-right",
+        "animation":"fade-up",
         "name": "Daniel Wilson",
         "designation": "CEO of Palm Grove Motel",
         "contact": "+1 (222) 333-4444",
@@ -50,7 +50,7 @@
       {
         "duration":"1000",
         "delay":"300",
-        "animation":"fade-right",
+        "animation":"fade-up",
         "easing":"ease",
         "name": "Emma Davis",
         "designation": "CEO of Ocean Breeze Inn",
@@ -62,7 +62,7 @@
       {
         "duration":"1000",
         "delay":"500",
-        "animation":"fade-right",
+        "animation":"fade-up",
         "easing":"ease",
         "name": "William Taylor",
         "designation": "CEO of Riverside Lodge",
@@ -74,7 +74,7 @@
       { 
         "duration":"1000",
       "delay":"0",
-      "animation":"fade-right",
+      "animation":"fade-up",
       "easing":"ease",
         "name": "Olivia Martinez",
         "designation": "CEO of  Tranquil Haven Guesthouse",
@@ -86,7 +86,7 @@
       { 
         "duration":"1000",
       "delay":"300",
-      "animation":"fade-right",
+      "animation":"fade-up",
       "easing":"ease",
         "name": "Ethan Clark",
         "designation": "CEO of Forest Retreat Guesthouse",
@@ -98,7 +98,7 @@
       { 
         "duration":"1000",
       "delay":"500",
-      "animation":"fade-right",
+      "animation":"fade-up",
       "easing":"ease",
         "name": "Ava Rodriguez",
         "designation": "CEO of  Harbor View Guesthouse",
@@ -110,7 +110,7 @@
       {
          "duration":"1000",
       "delay":"300",
-      "animation":"fade-right",
+      "animation":"fade-up",
       "easing":"ease",
         "name": "Noah Garcia",
         "designation": "CEO of Azure Springs Resort",
@@ -122,7 +122,7 @@
       { 
         "duration":"1000",
       "delay":"0",
-      "animation":"fade-right",
+      "animation":"fade-up",
       "easing":"ease",
         "name": "Mia Hernandez",
         "designation": "CEO of Serenity Cove Resort",

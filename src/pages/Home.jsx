@@ -3,12 +3,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Owner from "../components/Owner";
 import Estate from "../components/Estate";
 
 const Home = () => {
+  const navigation = useNavigation();
   const [owners, setOwners] = useState([]);
 
   useEffect(() => {
@@ -16,7 +17,12 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setOwners(data));
   }, []);
-
+  if (navigation.state === "loading")
+    return (
+      <div className="h-[calc(100vh-276px)] flex items-center justify-center">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
   return (
     <div className="">
       <div className="">

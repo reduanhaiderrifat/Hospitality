@@ -201,29 +201,23 @@ const Register = () => {
                   <span className="text-red-500">This field is required</span>
                 )}
                 <div className="flex justify-between mt-3">
-                  <div className="">
-                    <label className="mt-3 flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        className="checkbox checkbox-sm"
-                        {...register("checkbox")}
-                      />
-                      <Link
-                        to="/terms"
-                        className="label-text-alt link link-hover"
-                      >
-                        Accept our Terms & conditions
-                      </Link>
-                    </label>
-                    <p className="text-red-500">{accept}</p>
-                  </div>
-                  <a
-                    onClick={handleRefresh}
-                    className="btn bg-transparent hover:bg-transparent"
-                  >
-                    <IoMdRefreshCircle size={30} />
-                  </a>
+                  {/* <div className=""> */}
+                  <label className="mt-3 flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      className="checkbox checkbox-sm"
+                      {...register("checkbox")}
+                    />
+                    <Link
+                      to="/terms"
+                      className="label-text-alt link link-hover"
+                    >
+                      Accept our Terms & conditions
+                    </Link>
+                  </label>
+                  <p className="text-red-500">{accept}</p>
                 </div>
+                {/* </div> */}
               </div>
               {succes && <p className="text-green-500 text-3xl">{succes}</p>}
 
@@ -233,6 +227,8 @@ const Register = () => {
                 </button>
               </div>
               <Toaster />
+            </form>
+            <div className="flex items-center mx-2 justify-between">
               <p className="flex items-center">
                 Have an account?Please
                 <span>
@@ -241,7 +237,17 @@ const Register = () => {
                   </Link>
                 </span>
               </p>
-            </form>
+              <a
+                onClick={handleRefresh}
+                className="btn bg-transparent hover:bg-transparent"
+              >
+                <div className="tooltip tooltip-up" data-tip="refresh for user">
+                  <button>
+                    <IoMdRefreshCircle size={30} />
+                  </button>
+                </div>
+              </a>
+            </div>
           </div>
           <div className="text-center lg:text-left">
             <div

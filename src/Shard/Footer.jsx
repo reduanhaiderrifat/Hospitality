@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
           <a
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-duration="1000"
             rel="noopener noreferrer"
             href="#"

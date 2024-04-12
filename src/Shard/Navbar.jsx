@@ -569,6 +569,8 @@ const Navbar = () => {
               >
                 <div className="flex flex-col text-white bg-gray-600 shadow-lg justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
                   <img
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
                     src={
                       user?.photoURL ||
                       "https://i.ibb.co/R3SSpJQ/145856997-296fe121-5dfa-43f4-98b5-db50019738a7.jpg"
@@ -579,7 +581,11 @@ const Navbar = () => {
                   <div className="flex items-center justify-between">
                     <details className="dropdown">
                       <summary className="m-1 btn">
-                        <FaEdit size={25} />
+                        <div className="tooltip" data-tip="update profile!">
+                          <button className="btn">
+                            <FaEdit size={25} />
+                          </button>
+                        </div>
                       </summary>
 
                       <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-72">
@@ -623,12 +629,17 @@ const Navbar = () => {
                       onClick={handleRefresh}
                       className="btn rounded-full"
                     >
-                      <IoMdRefreshCircle size={30} />
+                      <div
+                        className="tooltip"
+                        data-tip="  Refresh for update profile!"
+                      >
+                        <button>
+                          <IoMdRefreshCircle size={30} />
+                        </button>
+                      </div>
                     </button>
                   </div>
-                  <p className="text-xs text-end">
-                    Refresh for update profile!
-                  </p>
+
                   <div className="space-y-3  divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                       <h2 className="text-xl font-semibold sm:text-2xl">
@@ -637,7 +648,14 @@ const Navbar = () => {
                       <p>{user?.email || "email not add"}</p>
                     </div>
                     <a onClick={handllogout} className="btn">
-                      <CiLogin size={30} /> Logout
+                      <div
+                        className="tooltip tooltip-right"
+                        data-tip="logout this user!"
+                      >
+                        <button className="flex items-center gap-1">
+                          <CiLogin size={30} /> Logout
+                        </button>
+                      </div>
                     </a>
                     <span className="text-red-500">{error}</span>
                     <Toaster />

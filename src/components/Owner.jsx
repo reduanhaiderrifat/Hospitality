@@ -32,15 +32,11 @@ const Owner = ({ owner }) => {
       </div>
       <div className="flex flex-col space-y-4">
         <div>
-          <h1
-            data-aos="fade-right"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
+          <h1 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
             {hotel_name}
           </h1>
           <h2
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="1100"
             data-aos-duration="1400"
             className="text-2xl font-semibold"
@@ -48,7 +44,7 @@ const Owner = ({ owner }) => {
             {name}
           </h2>
           <p
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="1200"
             data-aos-duration="1800"
             className="text-sm dark:text-gray-600"
@@ -58,7 +54,7 @@ const Owner = ({ owner }) => {
         </div>
         <div className="space-y-1">
           <span
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="1400"
             data-aos-duration="2200"
             className="flex items-center space-x-2"
@@ -77,7 +73,7 @@ const Owner = ({ owner }) => {
             <span className="dark:text-gray-600">{email}</span>
           </span>
           <span
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="1500"
             data-aos-duration="2600"
             className="flex items-center space-x-2"

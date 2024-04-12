@@ -31,7 +31,7 @@ const Estate = () => {
         </h2>
         <span className="w-1/2 text-center mx-auto">
           <p
-            data-aos="fade-left"
+            data-aos="fade-down"
             data-aos-delay="1000"
             data-aos-duration="1000"
           >
@@ -39,8 +39,8 @@ const Estate = () => {
             isn't just about
           </p>
           <p
-            data-aos="fade-right"
-            data-aos-delay="1000"
+            data-aos="fade-down"
+            data-aos-delay="2000"
             data-aos-duration="1000"
           >
             {" "}

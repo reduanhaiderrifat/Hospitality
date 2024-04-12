@@ -4,12 +4,13 @@ const EstateCars = ({ logo, index }) => {
   const { icon, description, to } = logo;
   return (
     <div
-      data-aos="fade-right"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay={index % 2 !== 0 && "1000"}
     >
       <Link
         to={to}
+        target="_blank"
         className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800"
       >
         <img

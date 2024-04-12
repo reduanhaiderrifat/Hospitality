@@ -7,13 +7,13 @@ const Motels = () => {
     <>
       <div className="text-center mx-auto  my-4">
         <h2 className=" text-4xl font-black flex gap-1 mb-3 justify-center">
-          <p data-aos="fade-down" data-aos-duration="1000">
+          <p data-aos="fade-up" data-aos-duration="1000">
             Welcome Our
           </p>
           {""}
 
           <p
-            data-aos="fade-left"
+            data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-delay="1000"
             className="text-orange-500"
@@ -22,22 +22,18 @@ const Motels = () => {
           </p>
         </h2>
         <span>
-          <p data-aos="fade-left" data-aos-duration="2000">
+          <p data-aos="fade-down" data-aos-duration="2000">
             Upon stepping into this charming guesthouse, one is immediately
             greeted by an ambiance of warmth and comfort. Nestled amidst lush
             greenery, this
           </p>
-          <p
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-delay="600"
-          >
+          <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
             quaint retreat offers a perfect blend of modern amenities and rustic
             charm, making it an ideal escape from the hustle and bustle of
             everyday life.
           </p>
           <p
-            data-aos="fade-left"
+            data-aos="fade-down"
             data-aos-duration="2000"
             data-aos-delay="1200"
           >
@@ -45,11 +41,7 @@ const Motels = () => {
             architecture adorned with flowering vines, inviting guests to
             explore the serene surroundings. As
           </p>
-          <p
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-delay="1800"
-          >
+          <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1800">
             you step inside, the interior unfolds with tasteful décor and cozy
             furnishings, creating an inviting atmosphere for relaxation and
             rejuvenation.

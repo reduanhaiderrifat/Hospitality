@@ -14,7 +14,7 @@ const Hotels = () => {
           {""}
 
           <p
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="1000"
             className="text-orange-500"
@@ -23,31 +23,23 @@ const Hotels = () => {
           </p>
         </h2>
         <span>
-          <p data-aos="fade-left" data-aos-duration="2000">
+          <p data-aos="fade-up" data-aos-duration="2000">
             Nestled amidst the bustling streets of [City Name], the [Hotel Name]
             stands tall as a beacon of elegance and luxury. From the moment you
             step into the
           </p>
-          <p
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-delay="600"
-          >
+          <p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="600">
             grand lobby, you're greeted with an atmosphere of refined
             sophistication.The check-in process was seamless, with the staff
             displaying warmth and
           </p>
-          <p
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            data-aos-delay="1200"
-          >
+          <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200">
             professionalism that set the tone for the entire stay. Upon entering
             the room, I was immediately struck by the meticulous attention to
             detail.
           </p>
           <p
-            data-aos="fade-right"
+            data-aos="fade-down"
             data-aos-duration="2000"
             data-aos-delay="1800"
           >

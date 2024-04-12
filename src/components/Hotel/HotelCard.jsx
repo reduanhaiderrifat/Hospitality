@@ -6,7 +6,7 @@ const HotelCard = ({ hotel, index }) => {
   return (
     <div>
       <div
-        data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
+        data-aos={index % 2 == 0 ? "fade-down" : "fade-up"}
         data-aos-duration="1000"
         className="rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800"
       >

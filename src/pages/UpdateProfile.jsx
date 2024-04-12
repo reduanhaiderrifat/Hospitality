@@ -28,12 +28,7 @@ const UpdateProfile = () => {
         />
         <div className="space-y-4 text-center divide-y dark:divide-gray-300">
           <div className="my-2 space-y-1">
-            <h2
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              className="text-xl font-semibold sm:text-2xl"
-            >
+            <h2 className="text-xl font-semibold sm:text-2xl">
               {user?.displayName}
             </h2>
           </div>
@@ -43,12 +38,7 @@ const UpdateProfile = () => {
           className="btn bg-sky-400 hover:bg-sky-600"
           onClick={() => document.getElementById("my_modal_5").showModal()}
         >
-          <FaEdit
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-delay="1000"
-            size={30}
-          />
+          <FaEdit size={30} />
         </button>
 
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
