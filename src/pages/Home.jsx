@@ -7,6 +7,7 @@ import { Link, useNavigation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Owner from "../components/Owner";
 import Estate from "../components/Estate";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -25,6 +26,9 @@ const Home = () => {
     );
   return (
     <div className="">
+      <Helmet>
+        <title>Hospitality_Home</title>
+      </Helmet>
       <div className="">
         <Swiper
           spaceBetween={30}

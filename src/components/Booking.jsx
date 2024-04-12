@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { deleting, getdata } from "../utils";
 import BookingCard from "./Resort/BookingCard";
 import Empty from "./Empty";
+import { Helmet } from "react-helmet-async";
 
 const Booking = () => {
   const [bookings, setBookings] = useState([]);
@@ -16,15 +17,20 @@ const Booking = () => {
   };
   if (bookings.length < 1) return <Empty></Empty>;
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-      {bookings.map((booking) => (
-        <BookingCard
-          key={booking.id}
-          handleDelete={handleDelete}
-          booking={booking}
-        ></BookingCard>
-      ))}
-    </div>
+    <>
+      <Helmet>
+        <title>Hospitality_Booking</title>
+      </Helmet>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+        {bookings.map((booking) => (
+          <BookingCard
+            key={booking.id}
+            handleDelete={handleDelete}
+            booking={booking}
+          ></BookingCard>
+        ))}
+      </div>
+    </>
   );
 };
 

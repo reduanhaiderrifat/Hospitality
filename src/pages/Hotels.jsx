@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 
 import HotelCard from "../components/Hotel/HotelCard";
+import { Helmet } from "react-helmet-async";
 
 const Hotels = () => {
   const hotels = useLoaderData();
   return (
     <>
+      <Helmet>
+        <title>Hospitality_Hotels</title>
+      </Helmet>
       <div className="text-center mx-auto  my-4">
         <h2 className=" text-4xl font-black flex gap-1 mb-3 justify-center">
           <p data-aos="fade-down" data-aos-duration="1000">
