@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaPhotoVideo, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { IoMdRefreshCircle } from "react-icons/io";
 
 const Register = () => {
-  const { cteateUser, handleGoogle, handleTwitter, unpdateUser } =
+  const { cteateUser, handleGoogle, handleTwitter, updateUser } =
     useContext(AuthContext);
   const [error, setError] = useState("");
   const [passwordError, setpasswordError] = useState("");
@@ -28,6 +29,7 @@ const Register = () => {
     setSuccess("");
     setError("");
     setpasswordError("");
+    setAccept("");
     if (password != confirmPassword) {
       setpasswordError("Password did not match");
       return;
@@ -53,28 +55,30 @@ const Register = () => {
       return;
     }
     cteateUser(email, password)
-      .then(() => {
-        unpdateUser(username, photo).then(() => {});
+      .then((result) => {
+        updateUser(username, photo).then(() => {});
         toast.success("User create successfully!");
         setSuccess("User create successfully!");
+        console.log(result.user);
       })
       .catch((error) => {
         setError(error.message);
-        console.log(error);
       });
   };
-
+  const handleRefresh = () => {
+    window.location.reload();
+  };
   return (
     <div className="bg-[#b49b48a8] min-h-[calc(100vh-276px)] ">
       <div className="flex justify-center pt-3 gap-2 flex-col">
-        <a onClick={handleGoogle} className="btn mx-auto  w-1/3">
+        <button onClick={handleGoogle} className="btn mx-auto  lg:w-1/3">
           <FcGoogle size={30} />
           Login with Google
-        </a>
-        <a onClick={handleTwitter} className="btn mx-auto w-1/3">
+        </button>
+        <button onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
           <FaTwitter size={30} className="text-blue-500" />
           Login with Twitter
-        </a>
+        </button>
       </div>
       <div className="divider">or</div>
       <div className="hero ">
@@ -196,28 +200,41 @@ const Register = () => {
                 {errors.confirmPassword && (
                   <span className="text-red-500">This field is required</span>
                 )}
-                <label className="mt-3 flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    className="checkbox checkbox-sm"
-                    {...register("checkbox")}
-                  />
-                  <Link to="/terms" className="label-text-alt link link-hover">
-                    Accept our Terms & conditions
-                  </Link>
-                </label>
-                <p className="text-red-500">{accept}</p>
+                <div className="flex justify-between mt-3">
+                  <div className="">
+                    <label className="mt-3 flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        className="checkbox checkbox-sm"
+                        {...register("checkbox")}
+                      />
+                      <Link
+                        to="/terms"
+                        className="label-text-alt link link-hover"
+                      >
+                        Accept our Terms & conditions
+                      </Link>
+                    </label>
+                    <p className="text-red-500">{accept}</p>
+                  </div>
+                  <a
+                    onClick={handleRefresh}
+                    className="btn bg-transparent hover:bg-transparent"
+                  >
+                    <IoMdRefreshCircle size={30} />
+                  </a>
+                </div>
               </div>
               {succes && <p className="text-green-500 text-3xl">{succes}</p>}
 
               <div className="form-control mt-6">
-                <button className="btn  bg-[#f5cd48] hover:bg-[#3cb84c]">
+                <button className="btn font-bold  bg-[#f5cd48] hover:bg-[#3cb84c]">
                   Register
                 </button>
               </div>
               <Toaster />
               <p className="flex items-center">
-                Have an account.Please
+                Have an account?Please
                 <span>
                   <Link className="btn btn-link" to="/login">
                     Login

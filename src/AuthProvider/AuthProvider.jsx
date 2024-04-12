@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   GoogleAuthProvider,
@@ -13,6 +14,7 @@ import {
 import auth from "../Firebase.config";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
+  // const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
@@ -26,12 +28,13 @@ const AuthProvider = ({ children }) => {
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const unpdateUser = (username, photo) => {
+  const updateUser = (username, photo) => {
     return updateProfile(auth.currentUser, {
       displayName: username,
       photoURL: photo,
     });
   };
+
   const singInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -48,7 +51,7 @@ const AuthProvider = ({ children }) => {
     loading,
     handleGoogle,
     handleTwitter,
-    unpdateUser,
+    updateUser,
   };
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {

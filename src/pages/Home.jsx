@@ -43,7 +43,7 @@ const Home = () => {
             >
               <div className="hero-overlay bg-opacity-60"></div>
               <div className="hero-content  text-neutral-content">
-                <div className="max-w-lg">
+                <div className="max-w-lg ">
                   <h1 className="mb-5 text-5xl font-bold">Sunset Bay Hotel</h1>
                   <p className="mb-5">
                     Enjoy breathtaking views of the ocean at Sunset Bay Hotel.

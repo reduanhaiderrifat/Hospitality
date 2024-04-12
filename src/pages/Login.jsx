@@ -5,10 +5,14 @@ import { FaEye, FaEyeSlash, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 const Login = () => {
   const { singInUser, handleGoogle, handleTwitter } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const location = useLocation();
+
   const navigate = useNavigate();
   const [succes, setSuccess] = useState("");
   const {
@@ -20,25 +24,27 @@ const Login = () => {
   const onSubmit = (data) => {
     const { email, password } = data;
     setSuccess("");
+    setError("");
 
     singInUser(email, password)
       .then(() => {
         setSuccess("Login successfully");
         toast.success("Login successfully");
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        setError("email or Password are not valid");
       });
   };
+
   return (
     <div className="bg-[#5fcaeb]">
       <div className="flex justify-center pt-3 gap-2 flex-col">
-        <a onClick={handleGoogle} className="btn mx-auto  w-1/3">
+        <a onClick={handleGoogle} className="btn mx-auto  lg:w-1/3">
           <FcGoogle size={30} />
           Login with Google
         </a>
-        <a onClick={handleTwitter} className="btn mx-auto w-1/3">
+        <a onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
           <FaTwitter size={30} className="text-blue-500" />
           Login with Twitter
         </a>
@@ -129,7 +135,9 @@ const Login = () => {
                 {errors.password && (
                   <span className="text-red-500">This field is required</span>
                 )}
+
                 <label className="label">
+                  <span className="text-red-500">{error}</span>
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
@@ -143,7 +151,7 @@ const Login = () => {
                 <p className="text-green-500 text-3xl font-bold">{succes}</p>
               </div>
               <p className="flex items-center">
-                Do not have an account.Please
+                <span className="text-sm"> Do not have an account?Please</span>
                 <Link className="btn btn-link" to="/register">
                   Register
                 </Link>

@@ -1,11 +1,28 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+
 import { CiLogin } from "react-icons/ci";
+import logo from "../../public/icon.webp";
+import { FaPhotoVideo, FaEdit } from "react-icons/fa";
 const Navbar = () => {
-  const { logOut, user } = useContext(AuthContext);
+  const [theme, setTheme] = useState("light");
+  const { logOut, user, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+  const handleUpdateProfile = (e) => {
+    e.preventDefault();
+    const from = new FormData(e.currentTarget);
+    const username = from.get("username");
+    const photo = from.get("photo");
+    updateUser(username, photo);
+    console.log(username, photo);
+  };
   const handllogout = () => {
     logOut()
       .then(() => {
@@ -15,18 +32,34 @@ const Navbar = () => {
         setError(error.message);
       });
   };
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("synthwave");
+    } else {
+      setTheme("light");
+    }
+  };
   const handleRefresh = () => {
     window.location.reload();
   };
   return (
-    <div>
-      <div className="navbar bg-base-200 shadow-lg">
+    <div
+      style={{
+        backgroundImage: "url(https://i.ibb.co/D4KZfqZ/navbar.jpg)",
+      }}
+      className="h-[267px] md:h-[358px] lg:h-[382px]  bg-no-repeat relative object-cover bg-contain "
+    >
+      <h2 className=" absolute left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
+        Welcome Our <span className="text-[#e0bb17f5] ">resort</span>
+      </h2>
+      <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown dropdown-hover z-10">
             <div
               tabIndex={0}
               role="button"
-              className="btn  btn-ghost lg:hidden"
+              className="btn focus:bg-slate-500 bg-slate-300 text-black lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,9 +78,9 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              <li className=" font-bold">
                 <NavLink
                   to="/"
                   style={({ isActive, isTransitioning }) => {
@@ -55,7 +88,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "black",
+                      color: isActive ? "#23BE0A" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -64,7 +97,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <a className="font-bold">Categories:</a>
+                <a className="font-bold">Estate:</a>
                 <ul className="p-2 z-10">
                   <li>
                     <NavLink
@@ -74,7 +107,8 @@ const Navbar = () => {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
                           border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          color: isActive ? "#23BE0A" : "",
+
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -90,7 +124,7 @@ const Navbar = () => {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
                           border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          color: isActive ? "#23BE0A" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -106,7 +140,7 @@ const Navbar = () => {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
                           border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          color: isActive ? "#23BE0A" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -122,7 +156,7 @@ const Navbar = () => {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
                           border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          color: isActive ? "#23BE0A" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -132,6 +166,40 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {user && (
+                <li>
+                  <NavLink
+                    to="/update"
+                    style={({ isActive, isTransitioning }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        backgroundColor: isActive ? "transparent" : "",
+                        border: isActive ? "1px solid #23BE0A" : "",
+                        color: isActive ? "#23BE0A" : "",
+                        viewTransitionName: isTransitioning ? "slide" : "",
+                      };
+                    }}
+                  >
+                    UpdateProfile
+                  </NavLink>
+                </li>
+              )}
+              <li>
+                <NavLink
+                  to="/booking"
+                  style={({ isActive, isTransitioning }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      backgroundColor: isActive ? "transparent" : "",
+                      border: isActive ? "1px solid #23BE0A" : "",
+                      color: isActive ? "#23BE0A" : "",
+                      viewTransitionName: isTransitioning ? "slide" : "",
+                    };
+                  }}
+                >
+                  Booking
+                </NavLink>
+              </li>
               <li>
                 <NavLink
                   to="/about"
@@ -140,7 +208,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "black",
+                      color: isActive ? "#23BE0A" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -156,7 +224,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "black",
+                      color: isActive ? "#23BE0A" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -172,7 +240,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #23BE0A" : "",
-                      color: isActive ? "#23BE0A" : "black",
+                      color: isActive ? "#23BE0A" : "",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -227,22 +295,25 @@ const Navbar = () => {
           </div>
           <a
             onClick={handleRefresh}
-            className="btn btn-ghost font-medium  text-xl md:text-2xl lg:text-3xl"
+            className="btn btn-ghost font-medium bg-[#01031379] lg:bg-transparent text-xl md:text-2xl lg:text-3xl"
           >
-            Hospitality
+            <img className="w-6 lg:w-10  bg-transparent" src={logo} alt="" />
+            <span className="text-secondary lg:text-[#f5cd48] font-bold">
+              Hospitality
+            </span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
+          <ul className="menu  menu-horizontal px-1">
+            <li className=" font-bold">
               <NavLink
                 to="/"
                 style={({ isActive, isTransitioning }) => {
                   return {
                     fontWeight: isActive ? "bold" : "",
                     backgroundColor: isActive ? "transparent" : "",
-                    border: isActive ? "1px solid #23BE0A" : "",
-                    color: isActive ? "#23BE0A" : "black",
+                    border: isActive ? "1px solid #f5cd48" : "",
+                    color: isActive ? "#f5cd48" : "",
                     viewTransitionName: isTransitioning ? "slide" : "",
                   };
                 }}
@@ -250,19 +321,19 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            <li className=" font-bold">
               <details>
-                <summary>Categories</summary>
+                <summary>Estate</summary>
                 <ul className="p-2 z-10">
-                  <li>
+                  <li className=" font-bold">
                     <NavLink
                       to="/hotels"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -270,15 +341,15 @@ const Navbar = () => {
                       Hotels
                     </NavLink>
                   </li>
-                  <li>
+                  <li className=" font-bold">
                     <NavLink
                       to="/motels"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -286,15 +357,15 @@ const Navbar = () => {
                       Motels
                     </NavLink>
                   </li>
-                  <li>
+                  <li className=" font-bold">
                     <NavLink
                       to="/guesthouse"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -302,15 +373,15 @@ const Navbar = () => {
                       GuestHouse
                     </NavLink>
                   </li>
-                  <li>
+                  <li className=" font-bold">
                     <NavLink
                       to="/resort"
                       style={({ isActive, isTransitioning }) => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "black",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -321,55 +392,99 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
-            <li>
-              <NavLink
-                to="/about"
-                style={({ isActive, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    backgroundColor: isActive ? "transparent" : "",
-                    border: isActive ? "1px solid #23BE0A" : "",
-                    color: isActive ? "#23BE0A" : "black",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-              >
-                About
-              </NavLink>
+            {user && (
+              <li className=" font-bold">
+                <NavLink
+                  to="/update"
+                  style={({ isActive, isTransitioning }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      backgroundColor: isActive ? "transparent" : "",
+                      border: isActive ? "1px solid #23BE0A" : "",
+                      color: isActive ? "#23BE0A" : "",
+                      viewTransitionName: isTransitioning ? "slide" : "",
+                    };
+                  }}
+                >
+                  UpdateProfile
+                </NavLink>
+              </li>
+            )}
+            {user && (
+              <li className=" font-bold">
+                <NavLink
+                  to="/booking"
+                  style={({ isActive, isTransitioning }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      backgroundColor: isActive ? "transparent" : "",
+                      border: isActive ? "1px solid #23BE0A" : "",
+                      color: isActive ? "#23BE0A" : "",
+                      viewTransitionName: isTransitioning ? "slide" : "",
+                    };
+                  }}
+                >
+                  Booking
+                </NavLink>
+              </li>
+            )}
+            <li className=" font-bold">
+              <details>
+                <summary>About</summary>
+                <ul className="p-4 z-10">
+                  <li>
+                    <NavLink
+                      to="/about"
+                      style={({ isActive, isTransitioning }) => {
+                        return {
+                          fontWeight: isActive ? "bold" : "",
+                          backgroundColor: isActive ? "transparent" : "",
+                          border: isActive ? "1px solid #23BE0A" : "",
+                          color: isActive ? "#23BE0A" : "",
+                          viewTransitionName: isTransitioning ? "slide" : "",
+                        };
+                      }}
+                    >
+                      About us
+                    </NavLink>
+                  </li>
+                  <li className=" font-bold">
+                    <NavLink
+                      to="/terms"
+                      style={({ isActive, isTransitioning }) => {
+                        return {
+                          fontWeight: isActive ? "bold" : "",
+                          backgroundColor: isActive ? "transparent" : "",
+                          border: isActive ? "1px solid #23BE0A" : "",
+                          color: isActive ? "#23BE0A" : "",
+                          viewTransitionName: isTransitioning ? "slide" : "",
+                        };
+                      }}
+                    >
+                      Terms & Conditions
+                    </NavLink>
+                  </li>
+                  <li className=" font-bold">
+                    <NavLink
+                      to="/contact"
+                      style={({ isActive, isTransitioning }) => {
+                        return {
+                          fontWeight: isActive ? "bold" : "",
+                          backgroundColor: isActive ? "transparent" : "",
+                          border: isActive ? "1px solid #23BE0A" : "",
+                          color: isActive ? "#23BE0A" : "",
+                          viewTransitionName: isTransitioning ? "slide" : "",
+                        };
+                      }}
+                    >
+                      Contact
+                    </NavLink>
+                  </li>
+                </ul>
+              </details>
             </li>
-            <li>
-              <NavLink
-                to="/terms"
-                style={({ isActive, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    backgroundColor: isActive ? "transparent" : "",
-                    border: isActive ? "1px solid #23BE0A" : "",
-                    color: isActive ? "#23BE0A" : "black",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-              >
-                Terms & Conditions
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                style={({ isActive, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    backgroundColor: isActive ? "transparent" : "",
-                    border: isActive ? "1px solid #23BE0A" : "",
-                    color: isActive ? "#23BE0A" : "black",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li>
+
+            <li className=" font-bold">
               <details>
                 <summary>Setting</summary>
                 <ul className="p-2 z-10">
@@ -377,7 +492,8 @@ const Navbar = () => {
                     <label className="cursor-pointer grid place-items-center">
                       <input
                         type="checkbox"
-                        value="synthwave"
+                        onChange={handleToggle}
+                        // value="synthwave"
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
                       <svg
@@ -416,7 +532,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end md:mr-5">
           {user ? (
             <div className="dropdown z-10 dropdown-hover bg-transparent  dropdown-left">
               <div
@@ -437,7 +553,7 @@ const Navbar = () => {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2  rounded-box w-72"
               >
-                <div className="flex flex-col bg-white shadow-lg justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+                <div className="flex flex-col text-white bg-gray-600 shadow-lg justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
                   <img
                     src={
                       user?.photoURL ||
@@ -446,6 +562,47 @@ const Navbar = () => {
                     alt=""
                     className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                   />
+                  <details className="dropdown">
+                    <summary className="m-1 btn">
+                      <FaEdit size={25} />
+                    </summary>
+
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-72">
+                      <form onSubmit={handleUpdateProfile}>
+                        <label className="input input-bordered mb-4 flex items-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            className="w-4 h-4 text-black opacity-70"
+                          >
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                          </svg>
+
+                          <input
+                            type="text"
+                            name="username"
+                            className="grow text-black"
+                            placeholder="Username"
+                          />
+                        </label>
+                        <label className="input input-bordered mb-4 flex items-center gap-2">
+                          <FaPhotoVideo size={20} color="black" />
+                          <input
+                            type="text"
+                            name="photo"
+                            className="grow text-black"
+                            placeholder="Photo_URL"
+                          />
+                        </label>
+                        <label>
+                          <button className="btn w-full hover:bg-transparent hover:text-black text-white bg-green-500 font-bold">
+                            Update
+                          </button>
+                        </label>
+                      </form>
+                    </ul>
+                  </details>
                   <div className="space-y-3  divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                       <h2 className="text-xl font-semibold sm:text-2xl">
@@ -466,13 +623,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="btn mr-2 bg-[#5fcaeb] hover:border-[#5fcaeb] hover:bg-transparent hover:text-[#5fcaeb]"
+                className="btn mr-2 bg-[#5fcaeb] border-none hover:border-[#5fcaeb] hover:bg-transparent hover:text-[#5fcaeb]"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn mr-2 bg-[#f5cd48] hover:border-[#f5cd48] hover:bg-transparent hover:text-[#f5cd48]"
+                className="btn border-none mr-2 bg-[#f5cd48] hover:border-[#f5cd48] hover:bg-transparent hover:text-[#f5cd48]"
               >
                 Singup
               </Link>
