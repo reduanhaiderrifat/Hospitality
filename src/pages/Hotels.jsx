@@ -33,7 +33,7 @@ const Hotels = () => {
             step into the
           </p>
           <p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="600">
-            grand lobby, you're greeted with an atmosphere of refined
+            grand lobby, you’re greeted with an atmosphere of refined
             sophistication.The check-in process was seamless, with the staff
             displaying warmth and
           </p>
@@ -52,7 +52,7 @@ const Hotels = () => {
             of my stay was
           </p>
           <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2400">
-            undoubtedly the breathtaking view from my room.The hotel's amenities
+            undoubtedly the breathtaking view from my room.The hotel’s amenities
             left nothing to be desired.Dining at the hotel was a culinary
             delight.
           </p>

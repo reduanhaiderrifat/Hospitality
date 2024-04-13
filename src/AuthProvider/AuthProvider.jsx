@@ -16,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   // const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [reloade, setReloade] = useState(false);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   const twitterProvider = new TwitterAuthProvider();
@@ -32,6 +33,8 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, {
       displayName: username,
       photoURL: photo,
+    }).then(() => {
+      setReloade(true);
     });
   };
 
@@ -59,7 +62,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
     });
     return () => unsuscribe();
-  }, []);
+  }, [reloade]);
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

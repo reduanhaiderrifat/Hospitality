@@ -36,7 +36,7 @@ const Estate = () => {
             data-aos-duration="1000"
           >
             Owning a piece of property or finding the perfect place to rent
-            isn't just about
+            isn’t just about
           </p>
           <p
             data-aos="fade-down"
@@ -44,7 +44,7 @@ const Estate = () => {
             data-aos-duration="1000"
           >
             {" "}
-            securing a physical space; it's about investing in your future and
+            securing a physical space; it’s about investing in your future and
             creating a sanctuary where dreams can thrive.
           </p>
         </span>

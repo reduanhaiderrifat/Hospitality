@@ -24,6 +24,7 @@ const Home = () => {
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
+
   return (
     <div className="">
       <Helmet>
@@ -67,7 +68,7 @@ const Home = () => {
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </a>
                 </div>
@@ -92,13 +93,13 @@ const Home = () => {
                     Relax on pristine beaches and indulge in world-class dining.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -124,13 +125,13 @@ const Home = () => {
                     perfect retreat.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -154,13 +155,13 @@ const Home = () => {
                     and friendly service.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -183,13 +184,13 @@ const Home = () => {
                     Enjoy simple comforts and easy access to the beach.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -212,13 +213,13 @@ const Home = () => {
                     location and rustic charm make for a memorable stay.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -244,13 +245,13 @@ const Home = () => {
                     peaceful retreat.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -276,13 +277,13 @@ const Home = () => {
                     aut repudiandae et a id nisi.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>
@@ -307,13 +308,13 @@ const Home = () => {
                     towering trees, experience a cozy and intimate getaway.
                   </p>
                   <Link
-                    to="/terms"
+                    to="/about"
                     href="#_"
                     className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#f5cd48] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                      Terms & Conditions
+                      About Us
                     </span>
                   </Link>
                 </div>

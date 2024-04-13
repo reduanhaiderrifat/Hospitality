@@ -1,4 +1,4 @@
-import { MdOutlineStar, MdStarHalf } from "react-icons/md";
+import { MdOutlineStar, MdPointOfSale, MdStarHalf } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Proptypes from "prop-types";
 const HotelCard = ({ hotel, index }) => {
@@ -8,7 +8,7 @@ const HotelCard = ({ hotel, index }) => {
       <div
         data-aos={index % 2 == 0 ? "fade-down" : "fade-up"}
         data-aos-duration="1000"
-        className="rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800"
+        className="rounded-md relative shadow-md dark:bg-gray-50 dark:text-gray-800"
       >
         <img
           src={image}
@@ -24,6 +24,9 @@ const HotelCard = ({ hotel, index }) => {
                 <span className="font-bold">Status : $</span> {""}
                 {status}
               </p>
+              <span className="flex items-center gap-1 text-white absolute top-2 px-2 rounded-full bg-[#fa4545d8]">
+                <MdPointOfSale /> {status}
+              </span>
               <p className="flex items-center gap-1">
                 <span className="flex items-center ">
                   <MdOutlineStar className="text-orange-400" />

@@ -31,7 +31,7 @@ const NotFound = () => {
             <span className="hover:underline font-medium text-[#054861]">
               <Link target="_blank" to="https://vercel.com/guides">
                 {" "}
-                ' page not found support guide'
+                "page not found support guide"
               </Link>{" "}
             </span>
             for troubleshooting tips.

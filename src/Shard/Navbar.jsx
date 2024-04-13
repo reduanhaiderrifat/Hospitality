@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
-
+import TextTransition, { presets } from "react-text-transition";
 import { CiLogin } from "react-icons/ci";
 import logo from "../../public/icon.webp";
 import { FaPhotoVideo, FaEdit } from "react-icons/fa";
@@ -44,6 +44,17 @@ const Navbar = () => {
   const handleRefresh = () => {
     window.location.reload();
   };
+
+  const TEXTS = ["Hotel", "Motel", "GuestHouse", "Resort"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
   return (
     <div
       style={{
@@ -51,8 +62,14 @@ const Navbar = () => {
       }}
       className="h-[267px] md:h-[358px] lg:h-[382px] border bg-no-repeat relative mx-auto  object-contain bg-contain w-full "
     >
-      <h2 className=" absolute left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
-        Welcome Our <span className="text-[#e0bb17f5] ">resort</span>
+      <h2 className=" absolute flex items-center gap-5 left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
+        Welcome Our
+        <span className="text-[#e0bb17f5] ">
+          {" "}
+          <TextTransition direction="down" springConfig={presets.wobbly}>
+            {TEXTS[index % TEXTS.length]}
+          </TextTransition>{" "}
+        </span>
       </h2>{" "}
       <div className="navbar  ">
         <div className="navbar-start">
@@ -450,8 +467,8 @@ const Navbar = () => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -466,8 +483,8 @@ const Navbar = () => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -482,8 +499,8 @@ const Navbar = () => {
                         return {
                           fontWeight: isActive ? "bold" : "",
                           backgroundColor: isActive ? "transparent" : "",
-                          border: isActive ? "1px solid #23BE0A" : "",
-                          color: isActive ? "#23BE0A" : "",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
                           viewTransitionName: isTransitioning ? "slide" : "",
                         };
                       }}
@@ -504,7 +521,7 @@ const Navbar = () => {
                       <input
                         type="checkbox"
                         onChange={handleToggle}
-                        // value="synthwave"
+                        value="synthwave"
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
                       <svg
@@ -549,7 +566,7 @@ const Navbar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="hover:bg-transparent   m-1"
+                className="hover:bg-transparent m-1"
               >
                 <img
                   src={
@@ -575,13 +592,11 @@ const Navbar = () => {
                     alt=""
                     className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                   />
-                  <div className="flex items-center justify-between">
+                  <div className="">
                     <details className="dropdown">
                       <summary className="m-1 btn">
                         <div className="tooltip" data-tip="update profile!">
-                          <button className="btn">
-                            <FaEdit size={25} />
-                          </button>
+                          <FaEdit size={25} />
                         </div>
                       </summary>
 
@@ -621,20 +636,6 @@ const Navbar = () => {
                         </form>
                       </ul>
                     </details>
-
-                    <button
-                      onClick={handleRefresh}
-                      className="btn rounded-full"
-                    >
-                      <div
-                        className="tooltip"
-                        data-tip="  Refresh for update profile!"
-                      >
-                        <button>
-                          <IoMdRefreshCircle size={30} />
-                        </button>
-                      </div>
-                    </button>
                   </div>
 
                   <div className="space-y-3  divide-y dark:divide-gray-300">

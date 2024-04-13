@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaPhotoVideo, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { IoMdRefreshCircle } from "react-icons/io";
+
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
@@ -66,9 +66,7 @@ const Register = () => {
         setError(error.message);
       });
   };
-  const handleRefresh = () => {
-    window.location.reload();
-  };
+
   return (
     <>
       <Helmet>
@@ -233,29 +231,14 @@ const Register = () => {
                 </div>
                 <Toaster />
               </form>
-              <div className="flex items-center mx-2 justify-between">
-                <p className="flex items-center">
-                  Have an account?Please
-                  <span>
-                    <Link className="btn btn-link" to="/login">
-                      Login
-                    </Link>
-                  </span>
-                </p>
-                <a
-                  onClick={handleRefresh}
-                  className="btn bg-transparent hover:bg-transparent"
-                >
-                  <div
-                    className="tooltip tooltip-up"
-                    data-tip="refresh for user"
-                  >
-                    <button>
-                      <IoMdRefreshCircle size={30} />
-                    </button>
-                  </div>
-                </a>
-              </div>
+              <p className="text-center">
+                Have an account?Please
+                <span>
+                  <Link className="btn btn-link" to="/login">
+                    Login
+                  </Link>
+                </span>
+              </p>
             </div>
             <div className="text-center lg:text-left">
               <div
