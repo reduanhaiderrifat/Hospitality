@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { RxCross2 } from "react-icons/rx";
 import { FaEdit } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
   const { updateUser, user } = useContext(AuthContext);
@@ -12,7 +13,9 @@ const UpdateProfile = () => {
     const from = new FormData(e.currentTarget);
     const username = from.get("username");
     const photo = from.get("photo");
-    updateUser(username, photo);
+    updateUser(username, photo).then(() => {
+      toast.success("Profile update successfully");
+    });
   };
   const handleRefresh = () => {
     window.location.reload();

@@ -3,14 +3,25 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import { FaEye, FaEyeSlash, FaPhotoVideo, FaTwitter } from "react-icons/fa";
+import {
+  FaEye,
+  FaEyeSlash,
+  FaFacebook,
+  FaPhotoVideo,
+  FaTwitter,
+} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { cteateUser, handleGoogle, handleTwitter, updateUser } =
-    useContext(AuthContext);
+  const {
+    cteateUser,
+    handleGoogle,
+    handleTwitter,
+    updateUser,
+    handleFacebook,
+  } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [passwordError, setpasswordError] = useState("");
   const [succes, setSuccess] = useState("");
@@ -33,34 +44,39 @@ const Register = () => {
     setAccept("");
     if (password != confirmPassword) {
       setpasswordError("Password did not match");
+      toast.error("Password did not match");
       return;
     }
     if (password.length < 6) {
       setpasswordError("password should be at least 6 characters or longer");
+      toast.error("password should be at least 6 characters or longer");
       return;
     }
     if (!/[A-Z]/.test(password)) {
       setpasswordError("Password should be at least one uppercase");
+      toast.error("Password should be at least one uppercase");
       return;
     }
     if (!/(?=.*[a-z])/.test(password)) {
       setpasswordError("Password should be at least one lowercase");
+      toast.error("Password should be at least one lowercase");
       return;
     }
     if (!/(?=.*[@$!%*?&])/.test(password)) {
       setpasswordError("Password should be at least one special character");
+      toast.error("Password should be at least one special character");
       return;
     }
     if (!checkbox) {
       setAccept("Please accept our terms & conditions");
+      toast.error("Please accept our terms & conditions");
       return;
     }
     cteateUser(email, password)
-      .then((result) => {
+      .then(() => {
         updateUser(username, photo).then(() => {});
         toast.success("User create successfully!");
         setSuccess("User create successfully!");
-        console.log(result.user);
       })
       .catch((error) => {
         setError(error.message);
@@ -81,6 +97,10 @@ const Register = () => {
           <button onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
             <FaTwitter size={30} className="text-blue-500" />
             Login with Twitter
+          </button>
+          <button onClick={handleFacebook} className="btn mx-auto lg:w-1/3">
+            <FaFacebook size={30} className="text-blue-500" />
+            Login with Facebook
           </button>
         </div>
         <div className="divider">or</div>
@@ -168,7 +188,7 @@ const Register = () => {
                       {...register("password", { required: true })}
                     />
                     <span onClick={() => setShowPassword(!showPassword)}>
-                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </label>
                   {errors.password && (
@@ -197,7 +217,7 @@ const Register = () => {
                       {...register("confirmPassword", { required: true })}
                     />
                     <span onClick={() => setShowPassword1(!showPassword1)}>
-                      {showPassword1 ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword1 ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </label>
                   {errors.confirmPassword && (
@@ -218,8 +238,8 @@ const Register = () => {
                         Accept our Terms & conditions
                       </Link>
                     </label>
-                    <p className="text-red-500">{accept}</p>
                   </div>
+                  <p className="text-red-500">{accept}</p>
                   {/* </div> */}
                 </div>
                 {succes && <p className="text-green-500 text-3xl">{succes}</p>}

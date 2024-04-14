@@ -33,7 +33,7 @@ const GuestHouseDetails = () => {
       <Helmet>
         <title>Hospitality_GuestHouse_Details</title>
       </Helmet>
-      <div className="grid grid-cols-1 lg:flex gap-9 bg-slate-200 p-3 rounded-lg">
+      <div className="grid grid-cols-1 gap-9 bg-slate-200 p-3 rounded-lg">
         <div className="border flex w-[100%] justify-center">
           {" "}
           <img
@@ -125,7 +125,7 @@ const GuestHouseDetails = () => {
                   className="btn  text-white bg-[#50B1C9]
                hover:border-[#50B1C9] active:bg-red-500 lg:hover:bg-white hover:text-black"
                 >
-                  Back
+                  Previous
                 </button>
               </div>
             </div>

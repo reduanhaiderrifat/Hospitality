@@ -24,8 +24,9 @@ const Navbar = () => {
     const from = new FormData(e.currentTarget);
     const username = from.get("username");
     const photo = from.get("photo");
-    updateUser(username, photo);
-    console.log(username, photo);
+    updateUser(username, photo).then(() => {
+      toast.success("Profile update successfully");
+    });
   };
   const handllogout = () => {
     logOut()

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash, FaTwitter } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
@@ -9,7 +9,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { singInUser, handleGoogle, handleTwitter } = useContext(AuthContext);
+  const { singInUser, handleGoogle, handleTwitter, handleFacebook } =
+    useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const location = useLocation();
@@ -35,6 +36,7 @@ const Login = () => {
       })
       .catch(() => {
         setError("email or Password are not valid");
+        toast.error("email or Password are not valid");
       });
   };
 
@@ -52,6 +54,10 @@ const Login = () => {
           <a onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
             <FaTwitter size={30} className="text-blue-500" />
             Login with Twitter
+          </a>
+          <a onClick={handleFacebook} className="btn mx-auto lg:w-1/3">
+            <FaFacebook size={30} className="text-blue-500" />
+            Login with Facebook
           </a>
         </div>
         <div className="divider">or</div>
@@ -134,20 +140,19 @@ const Login = () => {
                       {...register("password", { required: true })}
                     />
                     <span onClick={() => setShowPassword(!showPassword)}>
-                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </label>
                   {errors.password && (
                     <span className="text-red-500">This field is required</span>
                   )}
-
                   <label className="label">
-                    <span className="text-red-500">{error}</span>
                     <a href="#" className="label-text-alt link link-hover">
                       Forgot password?
                     </a>
                   </label>
                 </div>
+                <p className="text-red-500"> {error}</p>
                 <div className="form-control mt-6">
                   <button className="btn bg-[#5fcaeb] hover:bg-[#3cb84c]">
                     Login

@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 import {
+  FacebookAuthProvider,
   GoogleAuthProvider,
   TwitterAuthProvider,
   createUserWithEmailAndPassword,
@@ -12,6 +13,8 @@ import {
   updateProfile,
 } from "firebase/auth";
 import auth from "../Firebase.config";
+import toast from "react-hot-toast";
+
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -19,11 +22,21 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   const twitterProvider = new TwitterAuthProvider();
+  const faceBookProvider = new FacebookAuthProvider();
   const handleGoogle = () => {
-    signInWithPopup(auth, googleProvider);
+    signInWithPopup(auth, googleProvider).then(() => {
+      toast.success("user login with Google");
+    });
   };
   const handleTwitter = () => {
-    signInWithPopup(auth, twitterProvider);
+    signInWithPopup(auth, twitterProvider).then(() => {
+      toast.success("user login with Twitter");
+    });
+  };
+  const handleFacebook = () => {
+    signInWithPopup(auth, faceBookProvider).then(() => {
+      toast.success("user login with Facebook");
+    });
   };
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -54,6 +67,7 @@ const AuthProvider = ({ children }) => {
     handleGoogle,
     handleTwitter,
     updateUser,
+    handleFacebook,
   };
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {

@@ -44,7 +44,7 @@ const Footer = () => {
                 data-aos-duration="1000"
               >
                 <a rel="noopener noreferrer" href="#">
-                  Features
+                  Standard Room
                 </a>
               </li>
               <li
@@ -53,7 +53,7 @@ const Footer = () => {
                 data-aos-duration="1000"
               >
                 <a rel="noopener noreferrer" href="#">
-                  Integrations
+                  Deluxe Room
                 </a>
               </li>
               <li
@@ -62,7 +62,7 @@ const Footer = () => {
                 data-aos-duration="1000"
               >
                 <a rel="noopener noreferrer" href="#">
-                  Pricing
+                  Luxury Room
                 </a>
               </li>
               <li
@@ -71,7 +71,7 @@ const Footer = () => {
                 data-aos-duration="1000"
               >
                 <a rel="noopener noreferrer" href="#">
-                  FAQ
+                  Privet Room
                 </a>
               </li>
             </ul>

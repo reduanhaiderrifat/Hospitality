@@ -18,14 +18,10 @@ Check out the live site [Hospitality](https://real-estate-hospitality-60cde.web.
 ## Features and Characteristics
 
 - **AOS**: Integrate [AOS](https://github.com/michalsnik/aos) (Animate On Scroll Library) for smooth and beautiful animations.
-- **Firebase**: Utilize [Firebase](https://console.firebase.google.com/) for backend services such as authentication, database, and hosting.
-- **Prop-types**: Ensure type safety in your React components with [Prop-types](https://www.npmjs.com/package/prop-types).
-- **react-icons**: Access a wide range of icons with [react-icons](https://react-icons.github.io/react-icons/).
 - **react-text-transition**: Add smooth transitions to text elements with [react-text-transition](https://www.npmjs.com/package/react-text-transition).
 - **React-fast-marquee**: Implement scrolling elements easily with [React-fast-marquee](https://www.react-fast-marquee.com/documentation).
 - **React-helmet-async**: Dynamically manage document head metadata with [React-helmet-async](https://www.npmjs.com/package/react-helmet-async).
 - **React-hook-form**: Simplify form management with [React-hook-form](https://react-hook-form.com/get-started).
-- **React-hot-toast**: Enhance user experience with customizable toasts using [React-hot-toast](https://react-hot-toast.com/docs).
 - **Contact-Support**: Provide users with easy access to support channels for assistance and inquiries.
 - **About**: Offer information about your platform, its purpose, and its mission.
 - **Hotel-Details**: Display detailed information about hotels available on your platform.
