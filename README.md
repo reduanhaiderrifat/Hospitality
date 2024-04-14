@@ -32,4 +32,4 @@ Check out the live site [Hospitality](https://real-estate-hospitality-60cde.web.
 - **Update-Profile**: Allow users to update their profile information and preferences.
 - **Booking**: Enable users to make bookings for accommodations directly through your platform.
 - **Hospitality-Categories**: Categorize accommodations into different hospitality categories for easy browsing and filtering.
-  **Comment**: Users can interact with content by leaving comments through a user-friendly interface.
+- **Comment**: Users can interact with content by leaving comments through a user-friendly interface.
