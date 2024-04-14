@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import TextTransition, { presets } from "react-text-transition";
 import { CiLogin } from "react-icons/ci";
 import logo from "../../public/icon.webp";
-import { FaPhotoVideo, FaEdit } from "react-icons/fa";
+import { FaEdit, FaPhotoVideo } from "react-icons/fa";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -593,8 +593,8 @@ const Navbar = () => {
                     alt=""
                     className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
                   />
-                  <div className="">
-                    <details className="dropdown">
+                  <div className="hidden md:block lg:block ">
+                    <details className="dropdown ">
                       <summary className="m-1 btn">
                         <div className="tooltip" data-tip="update profile!">
                           <FaEdit size={25} />
@@ -638,7 +638,7 @@ const Navbar = () => {
                       </ul>
                     </details>
                   </div>
-
+                  {/*  */}
                   <div className="space-y-3  divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                       <h2 className="text-xl font-semibold sm:text-2xl">
