@@ -139,7 +139,7 @@
         "name": "Sophia White",
         "designation": "CEO of Forest Hideaway Lodget",
         "contact": "+1 (555) 123-4567",
-        "email": "sophia.white@gmail.com",
+        "email": "white@gmail.com",
         "resort_name": "Forest Hideaway Lodge",
         "img": "https://i.ibb.co/xSN0PLC/gst4.jpg"
       },
@@ -151,7 +151,7 @@
         "name": "Liam Thompson",
         "designation": "CEO of Tropical Haven Villa",
         "contact": "+1 (777) 888-9999",
-        "email": "liam.thompson@gmail.com",
+        "email": "thompson@gmail.com",
         "resort_name": "Tropical Haven Villa",
         "img": "https://i.ibb.co/gt7Wws9/gst3.jpg"
       },
@@ -163,7 +163,7 @@
         "name": "Harper Evans",
         "designation": "CEO of Lakeview Retreat",
         "contact": "+1 (999) 888-7777",
-        "email": "harper.evans@gmail.com",
+        "email": "evans@gmail.com",
         "resort_name": "Lakeview Retreat",
         "img": "https://i.ibb.co/HPPF1w5/owner.webp"
       },
@@ -175,7 +175,7 @@
         "name": "Ethan Turner",
         "designation": "CEO of Lakefront Lodge Guest House",
         "contact": "+1 (222) 333-4444",
-        "email": "ethan.turner@gmail.com",
+        "email": "turner@gmail.com",
         "resort_name": "Lakefront Lodge Guest House",
         "img": "https://i.ibb.co/zVCXX18/gst.jpg"
       }

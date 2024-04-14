@@ -57,8 +57,8 @@ const Navbar = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div className="h-[267px] md:h-[358px] lg:h-[382px] text-white border bg-[#010313d8] bg-no-repeat relative mx-auto  object-contain bg-cover w-full mb-4">
-      <h2 className=" absolute flex items-center gap-5 left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
+    <div className="h-[167px] md:h-[258px] lg:h-[282px] bg-[#007873]  relative  mx-auto w-full mb-2">
+      <h2 className=" absolute flex items-center mt-4  gap-5 left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
         Welcome Our
         <span className="text-[#e0bb17f5] ">
           {" "}
@@ -67,6 +67,23 @@ const Navbar = () => {
           </TextTransition>{" "}
         </span>
       </h2>{" "}
+      <div className="join absolute -mt-2 top-2/3 md:mt-4 left-1/4 md:left-1/4 lg:left-1/3 w-1/3 lg:mt-4 p-2">
+        <label className="input input-bordered flex items-center gap-2">
+          <input type="text" className="grow" placeholder="Search" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="w-4 h-4 text-black "
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </label>
+      </div>
       <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown dropdown-hover z-10">
@@ -335,9 +352,7 @@ const Navbar = () => {
             className="btn btn-ghost font-medium bg-[#01031379] lg:bg-transparent text-xl md:text-2xl lg:text-3xl"
           >
             <img className="w-6 lg:w-10  bg-transparent" src={logo} alt="" />
-            <span className="text-secondary lg:text-[#f5cd48] font-bold">
-              Hospitality
-            </span>
+            <span className="text-[#f5cd48] font-bold">Hospitality</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -350,7 +365,7 @@ const Navbar = () => {
                     fontWeight: isActive ? "bold" : "",
                     backgroundColor: isActive ? "transparent" : "",
                     border: isActive ? "1px solid #f5cd48" : "",
-                    color: isActive ? "#f5cd48" : "",
+                    color: isActive ? "#f5cd48" : "#FFF",
                     viewTransitionName: isTransitioning ? "slide" : "",
                   };
                 }}
@@ -360,7 +375,7 @@ const Navbar = () => {
             </li>
             <li className=" font-bold">
               <details>
-                <summary>Estate</summary>
+                <summary className="text-white">Estate</summary>
                 <ul className="p-2 z-10">
                   <li className=" font-bold">
                     <NavLink
@@ -442,7 +457,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #f5cd48" : "",
-                      color: isActive ? "#f5cd48" : "",
+                      color: isActive ? "#f5cd48" : "#FFF",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -460,7 +475,7 @@ const Navbar = () => {
                       fontWeight: isActive ? "bold" : "",
                       backgroundColor: isActive ? "transparent" : "",
                       border: isActive ? "1px solid #f5cd48" : "",
-                      color: isActive ? "#f5cd48" : "",
+                      color: isActive ? "#f5cd48" : "#FFF",
                       viewTransitionName: isTransitioning ? "slide" : "",
                     };
                   }}
@@ -471,7 +486,7 @@ const Navbar = () => {
             )}
             <li className=" font-bold">
               <details>
-                <summary>About</summary>
+                <summary className="text-white">About</summary>
                 <ul className="p-4 z-10">
                   <li>
                     <NavLink
@@ -543,7 +558,7 @@ const Navbar = () => {
 
             <li className=" font-bold">
               <details>
-                <summary>Setting</summary>
+                <summary className="text-white">Setting</summary>
                 <ul className="p-2 z-10">
                   <li>
                     <label className="cursor-pointer grid place-items-center">

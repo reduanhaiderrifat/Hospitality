@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "title": "Seaside Paradise Hotel",
+      "description": "Escape to a paradise by the sea at Seaside Paradise Hotel. Enjoy breathtaking ocean views, luxurious accommodations, and top-notch amenities. Immerse yourself in the ultimate coastal experience where every detail is meticulously crafted to provide you with unparalleled comfort and relaxation.",
+      "img": "https://i.ibb.co/Jx2Tjr1/hotel-4.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Mountain Haven Hotel",
+      "description": "Experience the tranquility of nature at Mountain Haven Hotel. Surrounded by lush greenery and fresh mountain air, this eco-friendly hotel offers a peaceful getaway. The charming eco-lodges blend seamlessly with the natural landscape, providing a cozy retreat after a day of exploring the nearby hiking trails or practicing yoga in the serene setting",
+      "img":"https://i.ibb.co/NYpcQ84/hotel-3.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Desert Oasis Hotel",
+      "description": "Embark on an unforgettable adventure at Desert Oasis Hotel. Explore the vast desert landscape by day and unwind under the starlit sky by night. Stay in luxurious Bedouin-style tents adorned with traditional decor, and immerse yourself in the rich culture of the desert.",
+      "img": "https://i.ibb.co/fvG3Mcf/hotel-2.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Seaside Paradise Resort",
+      "description": "Escape to a paradise by the sea at Seaside Paradise Resort. Enjoy breathtaking ocean views, luxurious accommodations, and top-notch amenities. Immerse yourself in the ultimate coastal experience where every detail is meticulously crafted to provide you with unparalleled comfort and relaxation. Whether you're lounging by the infinity pool, indulging in a spa treatment, or savoring gourmet cuisine at the fine dining restaurant, every moment at Seaside Paradise Resort is designed to exceed your expectations. With beachfront access and world-class service, this resort is the perfect destination for a memorable getaway.",
+      "img": "https://i.ibb.co/XjTc7SP/resort6.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Lakefront Lodge Guest House",
+      "description": "Enjoy lakeside living at Lakefront Lodge Guest House. Situated on the shores of a picturesque lake, this charming lodge offers breathtaking views and a tranquil atmosphere. Spend your days fishing off the dock, kayaking on the crystal-clear waters, or simply lounging in the lakeside hammocks. The cozy guest rooms feature rustic décor and modern amenities for a comfortable stay. Whether you're seeking outdoor adventure or relaxation, Lakefront Lodge Guest House offers the perfect lakeside retreat.",
+      "img": "https://i.ibb.co/pLDrhYV/gues-House1.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Mountain Haven Retreat",
+      "description": "Experience the tranquility of nature at Mountain Haven Retreat. Surrounded by lush greenery and fresh mountain air, this eco-friendly resort offers a peaceful getaway. The charming eco-lodges blend seamlessly with the natural landscape, providing a cozy retreat after a day of exploring the nearby hiking trails or practicing yoga in the serene setting. Delight in farm-to-table cuisine made from organic ingredients sourced from the resort's own farm, and unwind with holistic spa treatments that rejuvenate both body and mind. At Mountain Haven Retreat, sustainability meets luxury for an unforgettable eco-conscious escape.",
+      "img": "https://i.ibb.co/BfMTGTX/resort5.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Hilltop Haven Guest House",
+      "description": "Experience panoramic views at Hilltop Haven Guest House. Perched atop a scenic hill, this charming guest house offers breathtaking vistas of the surrounding countryside. Relax on the spacious terrace and soak in the beauty of nature, or explore nearby hiking trails for an outdoor adventure. The cozy guest rooms feature rustic yet elegant décor and modern amenities for a comfortable stay. Whether you're seeking relaxation or exploration, Hilltop Haven Guest House provides the perfect scenic retreat.",
+      "img": "https://i.ibb.co/1dfQptQ/guest-House.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Coastal Breeze Motel",
+      "description": "Experience the refreshing coastal breeze at Coastal Breeze Motel. Located just steps away from the beach, this charming motel offers comfortable accommodations with a seaside vibe. Relax in cozy rooms decorated with nautical accents, and enjoy easy access to the sand and surf. Whether you're lounging on the beach or exploring the nearby boardwalk attractions, Coastal Breeze Motel provides the perfect base for your coastal getaway.",
+      "img": "https://i.ibb.co/L92RHXT/MOTEL1.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Mountain View Motel",
+      "description": "Enjoy breathtaking mountain views at Mountain View Motel. Nestled in the heart of the mountains, this quaint motel offers cozy rooms with panoramic vistas. Wake up to the sight of snow-capped peaks or lush green valleys, and spend your days exploring the scenic wonders of the region. Whether you're hiking through alpine meadows or simply relaxing on the motel's terrace, Mountain View Motel provides a tranquil escape amidst nature's beauty.",
+      "img": "https://i.ibb.co/z4xHMC0/MOTEL.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Forest Retreat Motel",
+      "description": "Escape to the tranquility of the forest at Forest Retreat Motel. Surrounded by towering trees and lush foliage, this peaceful motel offers comfortable accommodations in a woodland setting. Stay in cozy cabins nestled among the trees, and enjoy the sounds of nature from your doorstep. Whether you're hiking through the forest trails or simply unwinding on your cabin's porch, Forest Retreat Motel provides a serene retreat for nature lovers.",
+      "img": "https://i.ibb.co/vk4fgs3/MOTEL2.jpg"
+    }
+  ]
+  
