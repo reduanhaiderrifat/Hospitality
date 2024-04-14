@@ -19,6 +19,7 @@ import Booking from "../components/Booking";
 import GuestHouseDetails from "../components/GuestHouseCard/GuestHouseDetails";
 import HotelDetails from "../components/Hotel/HotelDetails";
 import MotelDetails from "../components/Motel/MotelDetails";
+import Comments from "../pages/Comments";
 
 const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/comments",
+        element: <Comments></Comments>,
       },
       {
         path: "/terms",

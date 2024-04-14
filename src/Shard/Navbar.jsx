@@ -273,6 +273,22 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/comments"
+                  style={({ isActive, isTransitioning }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      backgroundColor: isActive ? "transparent" : "",
+                      border: isActive ? "1px solid #23BE0A" : "",
+                      color: isActive ? "#23BE0A" : "",
+                      viewTransitionName: isTransitioning ? "slide" : "",
+                    };
+                  }}
+                >
+                  Comments
+                </NavLink>
+              </li>
 
               <li>
                 <a className="font-bold">Setting</a>
@@ -508,6 +524,22 @@ const Navbar = () => {
                       }}
                     >
                       Contact
+                    </NavLink>
+                  </li>
+                  <li className=" font-bold">
+                    <NavLink
+                      to="/comments"
+                      style={({ isActive, isTransitioning }) => {
+                        return {
+                          fontWeight: isActive ? "bold" : "",
+                          backgroundColor: isActive ? "transparent" : "",
+                          border: isActive ? "1px solid #f5cd48" : "",
+                          color: isActive ? "#f5cd48" : "",
+                          viewTransitionName: isTransitioning ? "slide" : "",
+                        };
+                      }}
+                    >
+                      Comments
                     </NavLink>
                   </li>
                 </ul>

@@ -35,8 +35,8 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch(() => {
-        setError("email or Password are not valid");
-        toast.error("email or Password are not valid");
+        setError("email or Password is not valid");
+        toast.error("email or Password is not valid");
       });
   };
 
