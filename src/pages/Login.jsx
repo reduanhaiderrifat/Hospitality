@@ -9,8 +9,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { singInUser, handleGoogle, handleTwitter, handleFacebook } =
-    useContext(AuthContext);
+  const {
+    singInUser,
+    handleGoogle,
+    handleTwitter,
+    handleFacebook,
+    setReloade,
+  } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const location = useLocation();
@@ -31,6 +36,7 @@ const Login = () => {
     singInUser(email, password)
       .then(() => {
         setSuccess("Login successfully");
+        setReloade(true);
         toast.success("Login successfully");
         navigate(location?.state ? location.state : "/");
       })
@@ -39,7 +45,6 @@ const Login = () => {
         toast.error("email or Password is not valid");
       });
   };
-
   return (
     <>
       <Helmet>

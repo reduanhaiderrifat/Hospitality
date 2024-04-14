@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const NotFound = () => {
+  const error = useRouteError();
   return (
     <div>
       <Helmet>
@@ -10,6 +11,10 @@ const NotFound = () => {
       <div className=" h-screen bg-[#0103138e] flex gap-3 flex-col justify-center items-center">
         <div className="w-96 space-y-4 bg-white shadow-lg p-5 rounded-lg">
           <h1 className="text-3xl font-bold">Page Not Found</h1>
+          <p className="text-red-500">
+            {error.status} : {error.statusText}
+          </p>
+          <p className="text-red-500">{error.data || error.message}</p>
           <p className=" ">
             Looks like you have followed a broken link or entered a URL that
             does not exist on this site.
@@ -26,10 +31,14 @@ const NotFound = () => {
           </Link>
           <hr className="my-5 " />
           <p>
-            If this is your site, and you were not expecting a 404 for this
-            path, please visit to Vercel{" "}
+            If this is your site, and you were not expecting a{""}
+            {error.status}
+            {""}for this path, please visit to firebase{" "}
             <span className="hover:underline font-medium text-[#054861]">
-              <Link target="_blank" to="https://vercel.com/guides">
+              <Link
+                target="_blank"
+                to="https://cloud.google.com/terms/tssg/firebase"
+              >
                 {" "}
                 "page not found support guide"
               </Link>{" "}

@@ -21,6 +21,7 @@ const Register = () => {
     handleTwitter,
     updateUser,
     handleFacebook,
+    setReloade,
   } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [passwordError, setpasswordError] = useState("");
@@ -77,6 +78,7 @@ const Register = () => {
         updateUser(username, photo).then(() => {});
         toast.success("User create successfully!");
         setSuccess("User create successfully!");
+        setReloade(true);
       })
       .catch((error) => {
         setError(error.message);

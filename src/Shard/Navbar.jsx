@@ -57,12 +57,7 @@ const Navbar = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div
-      style={{
-        backgroundImage: "url(https://i.ibb.co/D4KZfqZ/navbar.jpg)",
-      }}
-      className="h-[267px] md:h-[358px] lg:h-[382px] border bg-[#347be6de] bg-no-repeat relative mx-auto  object-contain bg-contain w-full "
-    >
+    <div className="h-[267px] md:h-[358px] lg:h-[382px] text-white border bg-[#010313d8] bg-no-repeat relative mx-auto  object-contain bg-cover w-full mb-4">
       <h2 className=" absolute flex items-center gap-5 left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
         Welcome Our
         <span className="text-[#e0bb17f5] ">
@@ -593,6 +588,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div className="navbar-end md:mr-5">
           {user ? (
             <div className="dropdown z-10 dropdown-hover bg-transparent  dropdown-left">

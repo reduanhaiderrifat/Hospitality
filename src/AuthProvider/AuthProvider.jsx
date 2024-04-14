@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const updateUser = (username, photo) => {
+  const updateUser = async (username, photo) => {
     return updateProfile(auth.currentUser, {
       displayName: username,
       photoURL: photo,
@@ -68,6 +68,7 @@ const AuthProvider = ({ children }) => {
     handleTwitter,
     updateUser,
     handleFacebook,
+    setReloade,
   };
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {
