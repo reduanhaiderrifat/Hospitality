@@ -61,7 +61,7 @@ const Navbar = () => {
       style={{
         backgroundImage: "url(https://i.ibb.co/D4KZfqZ/navbar.jpg)",
       }}
-      className="h-[267px] md:h-[358px] lg:h-[382px] border bg-no-repeat relative mx-auto  object-contain bg-contain w-full "
+      className="h-[267px] md:h-[358px] lg:h-[382px] border bg-[#347be6de] bg-no-repeat relative mx-auto  object-contain bg-contain w-full "
     >
       <h2 className=" absolute flex items-center gap-5 left-1/4 lg:left-1/3 top-1/3 md:top-1/2 lg:top-1/2 text-white font-bold text-xl md:text-3xl lg:text-4xl">
         Welcome Our

@@ -22,6 +22,7 @@ Check out the live site [Hospitality](https://real-estate-hospitality-60cde.web.
 - **React-fast-marquee**: Implement scrolling elements easily with [React-fast-marquee](https://www.react-fast-marquee.com/documentation).
 - **React-helmet-async**: Dynamically manage document head metadata with [React-helmet-async](https://www.npmjs.com/package/react-helmet-async).
 - **React-hook-form**: Simplify form management with [React-hook-form](https://react-hook-form.com/get-started).
+- **Swiper**: [Swiper](https://swiperjs.com/demos) is a modern touch slider library for building responsive, mobile-friendly sliders and carousels.
 - **Contact-Support**: Provide users with easy access to support channels for assistance and inquiries.
 - **About**: Offer information about your platform, its purpose, and its mission.
 - **Hotel-Details**: Display detailed information about hotels available on your platform.

@@ -5,10 +5,10 @@
         "animation":"fade-up",
          "easing":"ease",
         "name": "Emily Johnson",
-        "designation": "CEO of Sunset Bay Hotel",
+        "designation": "CEO of Seaside Paradise Hotel",
         "contact": "+1 (123) 456-7890",
         "email": "emily@gmail.com",
-        "hotel_name": "Sunset Bay Hotel",
+        "hotel_name": "Seaside Paradise Hotel",
         "img": "https://i.ibb.co/H2NrY0j/5360.jpg"
       },
       {
@@ -17,10 +17,10 @@
         "animation":"fade-up",
         "easing":"ease",
         "name": "Michael Smith",
-        "designation": "CEO of Golden Sands Resort",
+        "designation": "CEO of Mountain Haven Hotel",
         "contact": "+1 (987) 654-3210",
         "email": "michael@gmail.com",
-        "hotel_name": "Golden Sands Resort",
+        "hotel_name": "Mountain Haven Hotel",
         "img": "https://i.ibb.co/0hjdnvY/677.jpg"
       },
       {
@@ -29,10 +29,10 @@
         "animation":"fade-up",
         "easing":"ease",
         "name": "Sophia Brown",
-        "designation": "CEO of Mountain View Lodge",
+        "designation": "CEO of Desert Oasis Hotel",
         "contact": "+1 (555) 123-4567",
         "email": "sophia@gmail.com",
-        "hotel_name": "Mountain View Lodge",
+        "hotel_name": "Desert Oasis Hotel",
         "img": "https://i.ibb.co/QfTtjYf/2148112827.jpg"
       },
       {
@@ -41,10 +41,10 @@
         "easing":"ease",
         "animation":"fade-up",
         "name": "Daniel Wilson",
-        "designation": "CEO of Palm Grove Motel",
+        "designation": "CEO of Forest Hideaway Hotel",
         "contact": "+1 (222) 333-4444",
         "email": "daniel@gmail.com",
-        "motel_name": "Palm Grove Motel",
+        "motel_name": "Forest Hideaway Hotel",
         "img": "https://i.ibb.co/Y7qc18m/5893.jpg"
       },
       {
@@ -53,10 +53,10 @@
         "animation":"fade-up",
         "easing":"ease",
         "name": "Emma Davis",
-        "designation": "CEO of Ocean Breeze Inn",
+        "designation": "CEO of Ski Chalet Hotel",
         "contact": "+1 (333) 444-5555",
         "email": "emma@gmail.com",
-        "motel_name": "Ocean Breeze Inn",
+        "motel_name": "Ski Chalet Hotel",
         "img": "https://i.ibb.co/r6YWzMT/2147708516.jpg"
       },
       {
@@ -65,10 +65,10 @@
         "animation":"fade-up",
         "easing":"ease",
         "name": "William Taylor",
-        "designation": "CEO of Riverside Lodge",
+        "designation": "CEO of Tropical Haven Hotel",
         "contact": "+1 (444) 555-6666",
         "email": "william@gmail.com",
-        "motel_name": "Riverside Lodge",
+        "motel_name": "Tropical Haven Hotel",
         "img": "https://i.ibb.co/jVKXzd9/2148113003.jpg"
       },
       { 
@@ -77,10 +77,10 @@
       "animation":"fade-up",
       "easing":"ease",
         "name": "Olivia Martinez",
-        "designation": "CEO of  Tranquil Haven Guesthouse",
+        "designation": "CEO of Coastal Cottage Guest House",
         "contact": "+1 (555) 666-7777",
         "email": "olivia@gmail.com",
-        "guesthouse_name": "Tranquil Haven Guesthouse",
+        "guesthouse_name": "Coastal Cottage Guest House",
         "img": "https://i.ibb.co/txtGXc6/2148479524.jpg"
       },
       { 
@@ -89,10 +89,10 @@
       "animation":"fade-up",
       "easing":"ease",
         "name": "Ethan Clark",
-        "designation": "CEO of Forest Retreat Guesthouse",
+        "designation": "CEO of Mountain View Guest Lodge",
         "contact": "+1 (777) 888-9999",
         "email": "ethan@gmail.com",
-        "guesthouse_name": "Forest Retreat Guesthouse",
+        "guesthouse_name": "Mountain View Guest Lodge",
         "img": "https://i.ibb.co/Gvv1v2Z/2148763859.jpg"
       },
       { 
@@ -101,10 +101,10 @@
       "animation":"fade-up",
       "easing":"ease",
         "name": "Ava Rodriguez",
-        "designation": "CEO of  Harbor View Guesthouse",
+        "designation": "CEO of Riverside Retreat Guest House",
         "contact": "+1 (999) 888-7777",
         "email": "ava@gmail.com",
-        "guesthouse_name": "Harbor View Guesthouse",
+        "guesthouse_name": "Riverside Retreat Guest House",
         "img": "https://i.ibb.co/0JFKq2n/hotel-owner3.jpg"
       },
       {
@@ -113,10 +113,10 @@
       "animation":"fade-up",
       "easing":"ease",
         "name": "Noah Garcia",
-        "designation": "CEO of Azure Springs Resort",
+        "designation": "CEO of Seaside Paradise Resort",
         "contact": "+1 (777) 999-8888",
         "email": "noah@gmail.com",
-        "resort_name": "Azure Springs Resort",
+        "resort_name": "Seaside Paradise Resort",
         "img": "https://i.ibb.co/2s7KpmG/hotel-owner1.jpg"
       },
       { 
@@ -125,11 +125,59 @@
       "animation":"fade-up",
       "easing":"ease",
         "name": "Mia Hernandez",
-        "designation": "CEO of Serenity Cove Resort",
+        "designation": "CEO of Desert Oasis Resort",
         "contact": "+1 (888) 777-6666",
         "email": "mia@gmail.com",
-        "resort_name": "Serenity Cove Resort",
+        "resort_name": "Desert Oasis Resort",
         "img": "https://i.ibb.co/dMxcTTR/hotel-owner.jpg"
+      },
+      {
+        "duration": "1000",
+        "delay": "0",
+        "animation": "fade-up",
+        "easing": "ease",
+        "name": "Sophia White",
+        "designation": "CEO of Forest Hideaway Lodget",
+        "contact": "+1 (555) 123-4567",
+        "email": "sophia.white@gmail.com",
+        "resort_name": "Forest Hideaway Lodge",
+        "img": "https://i.ibb.co/xSN0PLC/gst4.jpg"
+      },
+      {
+        "duration": "1000",
+        "delay": "300",
+        "animation": "fade-up",
+        "easing": "ease",
+        "name": "Liam Thompson",
+        "designation": "CEO of Tropical Haven Villa",
+        "contact": "+1 (777) 888-9999",
+        "email": "liam.thompson@gmail.com",
+        "resort_name": "Tropical Haven Villa",
+        "img": "https://i.ibb.co/gt7Wws9/gst3.jpg"
+      },
+      {
+        "duration": "1000",
+        "delay": "500",
+        "animation": "fade-up",
+        "easing": "ease",
+        "name": "Harper Evans",
+        "designation": "CEO of Lakeview Retreat",
+        "contact": "+1 (999) 888-7777",
+        "email": "harper.evans@gmail.com",
+        "resort_name": "Lakeview Retreat",
+        "img": "https://i.ibb.co/5kQrC7r/gst2.jpg"
+      },
+      {
+        "duration": "1000",
+        "delay": "0",
+        "animation": "fade-up",
+        "easing": "ease",
+        "name": "Ethan Turner",
+        "designation": "CEO of Lakefront Lodge Guest House",
+        "contact": "+1 (222) 333-4444",
+        "email": "ethan.turner@gmail.com",
+        "resort_name": "Lakefront Lodge Guest House",
+        "img": "https://i.ibb.co/zVCXX18/gst.jpg"
       }
     ]
 
