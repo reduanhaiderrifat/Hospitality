@@ -3,6 +3,7 @@ import { setData } from "../../utils";
 import { FaMapLocationDot, FaMoneyBill1 } from "react-icons/fa6";
 import { SiInstatus } from "react-icons/si";
 import { FaChartArea, FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const MotelDetails = () => {
   const navigate = useNavigate();
@@ -29,6 +30,9 @@ const MotelDetails = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Hospitality_Motel_Details</title>
+      </Helmet>
       <div className="grid grid-cols-1 lg:flex gap-9 bg-slate-200 p-3 rounded-lg">
         <div className="border flex w-[100%] justify-center">
           {" "}

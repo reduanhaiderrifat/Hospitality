@@ -14,7 +14,7 @@ const About = () => {
         <title>Hospitality_About</title>
       </Helmet>
       <div className="mx-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex justify-center items-center gap-3">
+        <div className="flex flex-col-reverse  md:grid  md:grid-cols-2 lg:grid lg:grid-cols-2 justify-center  gap-3">
           <div className=" space-y-12">
             <h2 className=" text-5xl font-extrabold">About Real Estate</h2>
             <p className="text-2xl">
@@ -33,13 +33,14 @@ const About = () => {
               </a>
             </div>
           </div>
+
           <img
-            className="h-[400px] text-center mx-auto"
+            className="h-[400px] bg-[#007873] rounded-full text-center mx-auto"
             src="https://i.ibb.co/XXcMCrj/handeshake.webp"
             alt=""
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex justify-center items-center mt-12 gap-3">
+        <div className="flex flex-col-reverse md:grid lg:grid md:grid-cols-2 lg:grid-cols-2 justify-center mt-12 gap-3">
           <div className=" space-y-9 shadow-2xl px-4 py-16">
             <h2 className=" text-5xl font-extrabold text-center">
               EFFECTIVE, EFFICIENT
@@ -63,7 +64,7 @@ const About = () => {
             alt=""
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 my-24">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-4 my-24">
           <img
             className="h-[400px] hover:-mt-3 transition-all"
             src="https://i.ibb.co/qrsg4Z2/mission.webp"

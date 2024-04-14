@@ -27,7 +27,7 @@ const BookingCard = ({ booking, handleDelete }) => {
         <div className="mt-6 mb-2">
           <p className="flex items-center justify-between text-xl">
             {" "}
-            <span className="block text-xl font-medium tracking-widest uppercase dark:text-violet-600">
+            <span className="block text-[#ff784fea] text-xl font-medium tracking-widest uppercase dark:text-violet-600">
               {segment_name}
             </span>
             <span className="font-bold">{type}</span>
@@ -44,7 +44,7 @@ const BookingCard = ({ booking, handleDelete }) => {
               className="  cursor-pointer text-sky-500 hover:underline"
               key={idx}
             >
-              #{facilitie}
+              {facilitie}
             </span>
           ))}
         </p>

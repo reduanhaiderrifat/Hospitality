@@ -14,7 +14,9 @@ const UpdateProfile = () => {
     const photo = from.get("photo");
     updateUser(username, photo);
   };
-
+  const handleRefresh = () => {
+    window.location.reload();
+  };
   return (
     <>
       <Helmet>
@@ -85,7 +87,7 @@ const UpdateProfile = () => {
               </form>
               <div className="modal-action">
                 <form method="dialog">
-                  <button className="btn">
+                  <button onClick={handleRefresh} className="btn">
                     <RxCross2 size={30} />
                   </button>
                 </form>

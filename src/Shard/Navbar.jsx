@@ -6,7 +6,7 @@ import TextTransition, { presets } from "react-text-transition";
 import { CiLogin } from "react-icons/ci";
 import logo from "../../public/icon.webp";
 import { FaPhotoVideo, FaEdit } from "react-icons/fa";
-import { IoMdRefreshCircle } from "react-icons/io";
+
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const { logOut, user, updateUser } = useContext(AuthContext);
@@ -49,10 +49,7 @@ const Navbar = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
     return () => clearTimeout(intervalId);
   }, []);
   return (
@@ -272,6 +269,7 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
+
               <li>
                 <a className="font-bold">Setting</a>
                 <ul className="p-2 z-10">

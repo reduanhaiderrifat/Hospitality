@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import {
   GoogleAuthProvider,
@@ -14,7 +14,6 @@ import {
 import auth from "../Firebase.config";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
-  // const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [reloade, setReloade] = useState(false);
   const [loading, setLoading] = useState(true);

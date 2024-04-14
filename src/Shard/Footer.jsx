@@ -155,7 +155,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase dark:text-gray-900">Social media</div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="2000"
+              data-aos-duration="1000"
+              className="uppercase dark:text-gray-900"
+            >
+              Social media
+            </div>
             <div className="flex justify-start space-x-3">
               <ul className="flex gap-4">
                 <li

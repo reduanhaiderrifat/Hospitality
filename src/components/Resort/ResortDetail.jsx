@@ -8,6 +8,7 @@ import {
 import { FaStarHalfAlt } from "react-icons/fa";
 import { SiInstatus } from "react-icons/si";
 import { setData } from "../../utils";
+import { Helmet } from "react-helmet-async";
 const ResortDetail = () => {
   const navigate = useNavigate();
   const details = useLoaderData();
@@ -33,6 +34,9 @@ const ResortDetail = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Hospitality_Resort_Details</title>
+      </Helmet>
       <div className="grid grid-cols-1 lg:flex gap-9 bg-slate-200 p-3 rounded-lg">
         <div className="border flex w-[100%] justify-center">
           {" "}

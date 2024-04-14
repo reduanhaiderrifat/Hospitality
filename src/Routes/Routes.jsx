@@ -19,6 +19,7 @@ import Booking from "../components/Booking";
 import GuestHouseDetails from "../components/GuestHouseCard/GuestHouseDetails";
 import HotelDetails from "../components/Hotel/HotelDetails";
 import MotelDetails from "../components/Motel/MotelDetails";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -113,6 +114,7 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+
       {
         path: "/update",
         element: (
