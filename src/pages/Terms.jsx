@@ -209,7 +209,7 @@ const Terms = () => {
               <p>
                 The offer should state the closing costs you are requesting as a
                 dollar amount, say $6,000 in closing, or as a percentage of the
-                home's purchase price such as 3%. The amount of the seller
+                home’s purchase price such as 3%. The amount of the seller
                 assist depends on the full purchase price of the property.
               </p>
             </span>
@@ -232,7 +232,7 @@ const Terms = () => {
                 Unless you buy a tear-down, you should include a home inspection
                 contingency in your offer. This clause allows you to walk away
                 from the deal if a home inspection reveals significant and/or
-                expensive-to-repair flaws in the structure's condition. These
+                expensive-to-repair flaws in the structure’s condition. These
                 are handled differently based on where you live—different states
                 and cities have different laws that deal with home inspections.
               </p>
@@ -276,7 +276,7 @@ const Terms = () => {
               <p>
                 How much time do you need to complete the purchase transaction?
                 Common time frames are 30, 45, and 60 days. Issues that can
-                affect this time frame normally include the seller's need to
+                affect this time frame normally include the seller’s need to
                 find a new home, the remaining term on your lease if you
                 currently rent, the amount of time needed for you to relocate if
                 you move from a job, and so on.
@@ -312,7 +312,7 @@ const Terms = () => {
                 fill-in-the-blank forms that cover all the bases, including the
                 ones described in this article. A common form in California is
                 the California Residential Purchase Agreement and Joint Escrow
-                Instructions document produced by the state's realtor
+                Instructions document produced by the state’s realtor
                 association. If you want to familiarize yourself with the
                 details of the purchase agreement form you are likely to use
                 before you write your offer, ask your real estate agent for a

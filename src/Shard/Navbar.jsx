@@ -14,7 +14,10 @@ const Navbar = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
+    if (localTheme) {
+      setTheme(localTheme);
+      document.documentElement.setAttribute("data-theme", localTheme);
+    }
   }, [theme]);
   const handleUpdateProfile = (e) => {
     e.preventDefault();
@@ -519,7 +522,6 @@ const Navbar = () => {
                       <input
                         type="checkbox"
                         onChange={handleToggle}
-                        value="synthwave"
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
                       <svg

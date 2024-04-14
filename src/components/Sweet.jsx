@@ -2,9 +2,7 @@ const Sweet = () => {
   return (
     <div className=" space-y-14">
       <div className="py-28 shadow-2xl rounded-lg px-5 space-y-4">
-        <h2 className="text-4xl font-bold  text-center">
-          NO SWEAT PARTNERSHIP
-        </h2>
+        <h2 className="text-4xl font-bold  text-center">NO SWEAT MEMBERSHIP</h2>
         <p className="text-xl  text-center">
           We don’t pester you for details, quotes, and samples. Just let us know
           which services you like and give us your requirements/guidelines, et
