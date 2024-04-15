@@ -17,16 +17,13 @@ const UpdateProfile = () => {
       toast.success("Profile update successfully");
     });
   };
-  const handleRefresh = () => {
-    window.location.reload();
-  };
   return (
     <>
       <Helmet>
         <title>Hospitality_UpdateProfile</title>
       </Helmet>
       <div className="flex  h-screen md:h-screen lg:h-[calc(100vh-276px)] justify-center items-center flex-col">
-        <div className="flex flex-col justify-center max-w-xs p-6 shadow-2xl bg-sky-200 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex flex-col justify-center max-w-xs p-6 shadow-2xl bg-sky-700 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -90,7 +87,7 @@ const UpdateProfile = () => {
               </form>
               <div className="modal-action">
                 <form method="dialog">
-                  <button onClick={handleRefresh} className="btn">
+                  <button className="btn">
                     <RxCross2 size={30} />
                   </button>
                 </form>

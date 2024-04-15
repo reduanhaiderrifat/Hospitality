@@ -5,14 +5,13 @@ import toast, { Toaster } from "react-hot-toast";
 import TextTransition, { presets } from "react-text-transition";
 import { CiLogin } from "react-icons/ci";
 import logo from "../../public/icon.webp";
-import { FaEdit, FaPhotoVideo } from "react-icons/fa";
+import { FaEdit, FaPhotoVideo, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const { logOut, user, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   useEffect(() => {
-    localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
     if (localTheme) {
       document.querySelector("html").setAttribute("data-theme", localTheme);
@@ -40,7 +39,11 @@ const Navbar = () => {
   const handleToggle = (e) => {
     if (e.target.checked) {
       setTheme("synthwave");
+      localStorage.setItem("theme", "synthwave");
+      document.querySelector("html").setAttribute("data-theme", "synthwave");
     } else {
+      localStorage.setItem("theme", "light");
+      document.querySelector("html").setAttribute("data-theme", "light");
       setTheme("light");
     }
   };
@@ -73,7 +76,7 @@ const Navbar = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill="currentColor"
-            className="w-4 h-4 text-black "
+            className="w-4 h-4 "
           >
             <path
               fillRule="evenodd"
@@ -645,29 +648,22 @@ const Navbar = () => {
 
                       <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-72">
                         <form onSubmit={handleUpdateProfile}>
-                          <label className="input input-bordered mb-4 flex items-center gap-2">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 16 16"
-                              fill="currentColor"
-                              className="w-4 h-4 text-black opacity-70"
-                            >
-                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-                            </svg>
+                          <label className="input input-bordered mb-4 flex text-secondary items-center gap-2">
+                            <FaUser></FaUser>
 
                             <input
                               type="text"
                               name="username"
-                              className="grow text-black"
+                              className="grow text-secondary"
                               placeholder="Username"
                             />
                           </label>
-                          <label className="input input-bordered mb-4 flex items-center gap-2">
-                            <FaPhotoVideo size={20} color="black" />
+                          <label className="input input-bordered mb-4 flex text-secondary items-center gap-2">
+                            <FaPhotoVideo size={20} />
                             <input
                               type="text"
                               name="photo"
-                              className="grow text-black"
+                              className="grow text-secondary"
                               placeholder="Photo_URL"
                             />
                           </label>

@@ -33,7 +33,7 @@ const HotelDetails = () => {
       <Helmet>
         <title>Hospitality_Hotel_Details</title>
       </Helmet>
-      <div className="grid grid-cols-1  gap-9 bg-slate-200 p-3 rounded-lg">
+      <div className="grid grid-cols-1  gap-9  p-3 rounded-lg">
         <div className="border flex w-[100%] justify-center">
           {" "}
           <img
@@ -113,7 +113,7 @@ const HotelDetails = () => {
                 <button
                   onClick={() => handleBooking(detailed)}
                   className="btn  hover:text-white hover:bg-[#46ad31]  border-[#46ad31]
-               text-black"
+               bg-transparent"
                 >
                   Booking
                 </button>

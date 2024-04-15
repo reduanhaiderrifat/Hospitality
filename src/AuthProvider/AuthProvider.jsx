@@ -45,7 +45,7 @@ const AuthProvider = ({ children }) => {
       displayName: username,
       photoURL: photo,
     }).then(() => {
-      setReloade(true);
+      setReloade(Math.random());
     });
   };
 
