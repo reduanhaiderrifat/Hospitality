@@ -158,18 +158,21 @@ const Login = () => {
                 </div>
                 <p className="text-red-500"> {error}</p>
                 <div className="form-control mt-6">
-                  <button className="btn bg-[#5fcaeb] hover:bg-[#3cb84c]">
+                  <button
+                    type="submit"
+                    className="btn bg-[#5fcaeb] hover:bg-[#3cb84c]"
+                  >
                     Login
                   </button>
                   <Toaster />
                   <p className="text-green-500 text-3xl font-bold">{succes}</p>
                 </div>
                 <p className="flex items-center">
-                  <span className="text-sm">
-                    {" "}
-                    Do not have an account?Please
-                  </span>
-                  <Link className="btn btn-link" to="/register">
+                  <span className="text-sm"> If you new here? Please</span>
+                  <Link
+                    className="btn no-underline  btn-link text-[#ff5395]"
+                    to="/register"
+                  >
                     Register
                   </Link>
                 </p>

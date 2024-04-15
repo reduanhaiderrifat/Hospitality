@@ -68,7 +68,7 @@ const Navbar = () => {
       </h2>{" "}
       <div className="join absolute -mt-2 top-2/3 md:mt-4 left-1/4 md:left-1/4 lg:left-1/3 w-1/3 lg:mt-4 p-2">
         <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" />
+          <input type="text" className="grow" placeholder="Search..." />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"

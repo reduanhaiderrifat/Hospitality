@@ -14,7 +14,6 @@ import {
 } from "firebase/auth";
 import auth from "../Firebase.config";
 import toast from "react-hot-toast";
-
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);

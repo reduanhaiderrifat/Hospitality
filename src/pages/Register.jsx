@@ -257,7 +257,10 @@ const Register = () => {
               <p className="text-center">
                 Have an account?Please
                 <span>
-                  <Link className="btn btn-link" to="/login">
+                  <Link
+                    className="btn no-underline  btn-link text-[#ff5395]"
+                    to="/login"
+                  >
                     Login
                   </Link>
                 </span>
