@@ -18,7 +18,7 @@ const Home = () => {
     fetch("slider.json")
       .then((res) => res.json())
       .then((data) => setslider(data));
-  });
+  }, []);
   useEffect(() => {
     fetch("owner.json")
       .then((res) => res.json())

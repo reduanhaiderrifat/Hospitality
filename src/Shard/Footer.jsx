@@ -1,6 +1,14 @@
+import { FaArrowUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="px-4 bg-[#010313] text-white divide-y dark:bg-gray-100 dark:text-gray-800">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
@@ -228,6 +236,17 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+            </div>
+            <div className=" text-end">
+              <button
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="1000"
+                onClick={scrollToTop}
+                className="btn rounded-full border-[#e0bb17f5] text-[#e0bb17f5] bg-transparent hover:bg-transparent"
+              >
+                <FaArrowUp />
+              </button>
             </div>
           </div>
         </div>

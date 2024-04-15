@@ -54,10 +54,34 @@
       "img": "https://i.ibb.co/z4xHMC0/MOTEL.jpg"
     },
     {
-      "id": 9,
+      "id":10,
       "title": "Forest Retreat Motel",
       "description": "Escape to the tranquility of the forest at Forest Retreat Motel. Surrounded by towering trees and lush foliage, this peaceful motel offers comfortable accommodations in a woodland setting. Stay in cozy cabins nestled among the trees, and enjoy the sounds of nature from your doorstep. Whether you're hiking through the forest trails or simply unwinding on your cabin's porch, Forest Retreat Motel provides a serene retreat for nature lovers.",
       "img": "https://i.ibb.co/vk4fgs3/MOTEL2.jpg"
+    },
+    {
+      "id":11,
+      "title": "Riverside Haven Motel",
+      "description": "Experience riverside tranquility at Riverside Haven Motel. Nestled along the banks of a peaceful river, this charming motel offers comfortable accommodations with scenic views. Stay in cozy rooms overlooking the water, and spend your days fishing, kayaking, or simply relaxing on the riverside deck. Whether you're seeking adventure or relaxation, Riverside Haven Motel provides the perfect retreat for a serene riverside escape.",
+      "img": "https://i.ibb.co/wC6DX0h/MOTEL-7.jpg"
+    },
+    {
+      "id":12,
+      "title": "Urban Oasis Motel",
+      "description": "Escape to the tranquility of the forest at Forest Retreat Motel. Surrounded by towering trees and lush foliage, this peaceful motel offers comfortable accommodations in a woodland setting. Stay in cozy cabins nestled among the trees, and enjoy the sounds of nature from your doorstep. Whether you're hiking through the forest trails or simply unwinding on your cabin's porch, Forest Retreat Motel provides a serene retreat for nature lovers.",
+      "img": "https://i.ibb.co/XLwV1hY/MOTEL-8.jpg"
+    },
+    {
+      "id":13,
+      "title": "Ski Chalet Hotel",
+      "description": "Indulge in winter fun at Ski Chalet Hotel. Located slopeside, this hotel offers easy access to skiing, snowboarding, and other snowy adventures. After a day on the slopes, unwind in the cozy chalets equipped with all the comforts of home. Soothe tired muscles in the sauna or indulge in a hot cocoa by the fireplace. With ski-in/ski-out access and après-ski activities, Ski Chalet Hotel is the perfect destination for winter sports enthusiasts.",
+      "img": "https://i.ibb.co/dgQ43sM/hotel-6.jpg"
+    },
+    {
+      "id":14,
+      "title": "Tropical Haven Hotel",
+      "description": "Experience ultimate relaxation at Tropical Haven Hotel. With its private beachfront location and luxurious amenities, this hotel is perfect for a beach getaway. Lounge by the pool with a refreshing cocktail, or take a leisurely stroll along the pristine white sand beach. The spacious hotel features elegant interiors and stunning ocean views, providing a serene retreat for couples or families. Whether you're seeking adventure or relaxation, Tropical Haven Hotel offers the perfect balance of luxury and tranquility.",
+      "img": "https://i.ibb.co/NrTpYfq/hotel-5.jpg"
     }
   ]
   

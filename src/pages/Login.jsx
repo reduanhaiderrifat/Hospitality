@@ -19,7 +19,6 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const location = useLocation();
-
   const navigate = useNavigate();
   const [succes, setSuccess] = useState("");
   const {

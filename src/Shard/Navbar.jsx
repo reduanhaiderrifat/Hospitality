@@ -15,8 +15,7 @@ const Navbar = () => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
     if (localTheme) {
-      setTheme(localTheme);
-      document.documentElement.setAttribute("data-theme", localTheme);
+      document.querySelector("html").setAttribute("data-theme", localTheme);
     }
   }, [theme]);
   const handleUpdateProfile = (e) => {

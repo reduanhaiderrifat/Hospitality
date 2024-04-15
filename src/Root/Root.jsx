@@ -18,7 +18,7 @@ const Root = () => {
     );
   }
   return (
-    <div className="px-1 lg:px-4 mx-auto">
+    <div className="px-1 md:px-2 lg:px-4 mx-auto">
       <Navbar></Navbar>
 
       <Outlet></Outlet>

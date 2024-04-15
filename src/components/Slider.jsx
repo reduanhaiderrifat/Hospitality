@@ -14,7 +14,7 @@ const Slider = ({ slider }) => {
         <div className="hero-content  text-neutral-content">
           <div className="max-w-lg ">
             <h1 className="mb-5 text-5xl font-bold">{title}</h1>
-            <p className="mb-5">{description}</p>
+            <p className="mb-5 text-sm md:text-lg lg:text-xl">{description}</p>
             <Link
               to="/about"
               className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"

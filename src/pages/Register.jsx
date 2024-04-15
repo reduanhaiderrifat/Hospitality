@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import {
   FaEye,
@@ -29,7 +29,7 @@ const Register = () => {
   const [accept, setAccept] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
-
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -79,6 +79,7 @@ const Register = () => {
         toast.success("User create successfully!");
         setSuccess("User create successfully!");
         setReloade(true);
+        navigate("/");
       })
       .catch((error) => {
         setError(error.message);

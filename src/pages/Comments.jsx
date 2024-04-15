@@ -41,6 +41,9 @@ const Comments = () => {
           Add your experience about our website and our property dealing
         </h2>
         <form onSubmit={handleFormSubmit}>
+          <h2 className=" text-sm mb-1">
+            If you login (Name and Email) are not required. You can ignor it.
+          </h2>
           <div className="grid grid-cols-1 gap-5 mb-32">
             <input
               type="text"
