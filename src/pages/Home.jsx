@@ -47,7 +47,6 @@ const Home = () => {
           pagination={{
             clickable: true,
           }}
-          loop={true}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"

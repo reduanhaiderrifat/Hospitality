@@ -13,7 +13,6 @@ import {
   updateProfile,
 } from "firebase/auth";
 import auth from "../Firebase.config";
-import toast from "react-hot-toast";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -23,19 +22,13 @@ const AuthProvider = ({ children }) => {
   const twitterProvider = new TwitterAuthProvider();
   const faceBookProvider = new FacebookAuthProvider();
   const handleGoogle = () => {
-    signInWithPopup(auth, googleProvider).then(() => {
-      toast.success("user login with Google");
-    });
+    return signInWithPopup(auth, googleProvider);
   };
   const handleTwitter = () => {
-    signInWithPopup(auth, twitterProvider).then(() => {
-      toast.success("user login with Twitter");
-    });
+    return signInWithPopup(auth, twitterProvider);
   };
   const handleFacebook = () => {
-    signInWithPopup(auth, faceBookProvider).then(() => {
-      toast.success("user login with Facebook");
-    });
+    return signInWithPopup(auth, faceBookProvider);
   };
   const cteateUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);

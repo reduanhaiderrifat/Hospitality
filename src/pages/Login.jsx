@@ -44,6 +44,24 @@ const Login = () => {
         toast.error("email or Password is not valid");
       });
   };
+  const handleGoogleLogin = () => {
+    handleGoogle().then(() => {
+      navigate(location?.state ? location.state : "/");
+      toast.success("user login with Google");
+    });
+  };
+  const handleTwitterLogin = () => {
+    handleTwitter().then(() => {
+      navigate(location?.state ? location.state : "/");
+      toast.success("user login with Twitter");
+    });
+  };
+  const handleFacebookLogin = () => {
+    handleFacebook().then(() => {
+      navigate(location?.state ? location.state : "/");
+      toast.success("user login with Facebook");
+    });
+  };
   return (
     <>
       <Helmet>
@@ -51,15 +69,15 @@ const Login = () => {
       </Helmet>
       <div className="bg-[#5fcaeb]">
         <div className="flex justify-center pt-3 gap-2 flex-col">
-          <a onClick={handleGoogle} className="btn mx-auto  lg:w-1/3">
+          <a onClick={handleGoogleLogin} className="btn mx-auto  lg:w-1/3">
             <FcGoogle size={30} />
             Login with Google
           </a>
-          <a onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
+          <a onClick={handleTwitterLogin} className="btn mx-auto lg:w-1/3">
             <FaTwitter size={30} className="text-blue-500" />
             Login with Twitter
           </a>
-          <a onClick={handleFacebook} className="btn mx-auto lg:w-1/3">
+          <a onClick={handleFacebookLogin} className="btn mx-auto lg:w-1/3">
             <FaFacebook size={30} className="text-blue-500" />
             Login with Facebook
           </a>

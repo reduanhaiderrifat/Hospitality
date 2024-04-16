@@ -13,6 +13,7 @@ const Navbar = () => {
   const [error, setError] = useState("");
   useEffect(() => {
     const localTheme = localStorage.getItem("theme");
+    setTheme(localTheme);
     if (localTheme) {
       document.querySelector("html").setAttribute("data-theme", localTheme);
     }
@@ -328,6 +329,7 @@ const Navbar = () => {
                       <input
                         type="checkbox"
                         value="synthwave"
+                        checked={theme === "synthwave"}
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
                       <svg
@@ -602,6 +604,7 @@ const Navbar = () => {
                     <label className="cursor-pointer grid place-items-center">
                       <input
                         type="checkbox"
+                        checked={theme === "synthwave"}
                         onChange={handleToggle}
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
@@ -744,13 +747,21 @@ const Navbar = () => {
               >
                 Login
               </Link>
-              <Link
+              {/* <Link
                 to="/register"
                 className="btn border-none mr-2 bg-[#f5cd48] hover:border-[#f5cd48] hover:bg-transparent hover:text-[#f5cd48]"
               >
                 Singup
-              </Link>
+              </Link> */}
             </>
+          )}
+          {user && (
+            <button
+              onClick={handllogout}
+              className="lg:flex hover:bg-transparent hover:border-[#ffd23f] border-[#ffd23f] text-[#f5cd48] bg-transparent md:flex btn hidden  items-center gap-1"
+            >
+              <CiLogin size={30} /> Logout
+            </button>
           )}
         </div>
       </div>
