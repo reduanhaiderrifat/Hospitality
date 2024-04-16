@@ -20,6 +20,7 @@ import GuestHouseDetails from "../components/GuestHouseCard/GuestHouseDetails";
 import HotelDetails from "../components/Hotel/HotelDetails";
 import MotelDetails from "../components/Motel/MotelDetails";
 import Comments from "../pages/Comments";
+import Client from "../pages/Client";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,15 @@ const router = createBrowserRouter([
           </PrivetRouter>
         ),
         loader: () => fetch("/motel.json"),
+      },
+      {
+        path: "/client",
+        element: (
+          <PrivetRouter>
+            <Client></Client>
+          </PrivetRouter>
+        ),
+        loader: () => fetch("/client.json"),
       },
       {
         path: "/resort",

@@ -241,6 +241,22 @@ const Navbar = () => {
               )}
               <li>
                 <NavLink
+                  to="/client"
+                  style={({ isActive, isTransitioning }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      backgroundColor: isActive ? "transparent" : "",
+                      border: isActive ? "1px solid #23BE0A" : "",
+                      color: isActive ? "#23BE0A" : "",
+                      viewTransitionName: isTransitioning ? "slide" : "",
+                    };
+                  }}
+                >
+                  Client
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/about"
                   style={({ isActive, isTransitioning }) => {
                     return {
@@ -353,7 +369,7 @@ const Navbar = () => {
             onClick={handleRefresh}
             className="btn btn-ghost font-medium bg-[#01031379] lg:bg-transparent text-xl md:text-2xl lg:text-3xl"
           >
-            <img className="w-6 lg:w-10  bg-transparent" src={logo} alt="" />
+            <img className="w-6 lg:w-8  bg-transparent" src={logo} alt="" />
             <span className="text-[#f5cd48] font-bold">Hospitality</span>
           </a>
         </div>
@@ -486,6 +502,22 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
+            <li className=" font-bold">
+              <NavLink
+                to="/client"
+                style={({ isActive, isTransitioning }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    backgroundColor: isActive ? "transparent" : "",
+                    border: isActive ? "1px solid #f5cd48" : "",
+                    color: isActive ? "#f5cd48" : "#FFF",
+                    viewTransitionName: isTransitioning ? "slide" : "",
+                  };
+                }}
+              >
+                Client
+              </NavLink>
+            </li>
             <li className=" font-bold">
               <details>
                 <summary className="text-white">About</summary>
