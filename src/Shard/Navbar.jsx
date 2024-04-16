@@ -329,6 +329,7 @@ const Navbar = () => {
                       <input
                         type="checkbox"
                         value="synthwave"
+                        onChange={handleToggle}
                         checked={theme === "synthwave"}
                         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                       />
@@ -369,7 +370,7 @@ const Navbar = () => {
           </div>
           <a
             onClick={handleRefresh}
-            className="btn btn-ghost font-medium lg:bg-transparent text-xl md:text-2xl lg:text-3xl"
+            className="btn btn-ghost font-medium  hover:bg-transparent lg:bg-transparent text-xl md:text-2xl lg:text-3xl"
           >
             <img className="w-6  lg:w-8 bg-transparent" src={logo} alt="" />
             <span className="text-[#f5cd48] text-xl md:text-2xl lg:text-2xl font-bold">
