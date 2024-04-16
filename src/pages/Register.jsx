@@ -108,7 +108,7 @@ const Register = () => {
         </div>
         <div className="divider">or</div>
         <div className="hero ">
-          <div className="hero-content lg:flex-row-reverse flex-col">
+          <div className="hero-content md:flex-row-reverse lg:flex-row-reverse flex-col">
             <div className="card shrink-0 w-full  max-w-sm shadow-2xl bg-base-100">
               <h2 className=" text-center text-3xl font-bold">Register</h2>
               <form
@@ -271,7 +271,7 @@ const Register = () => {
                 style={{
                   backgroundImage: "url(https://i.ibb.co/HrQsRPf/login.jpg)",
                 }}
-                className="text-center p-24 md:p-56 lg:p-56 space-y-6 bg-no-repeat bg-contain lg:text-left"
+                className="text-center p-24 md:p-32 lg:p-56 space-y-6 bg-no-repeat bg-contain lg:text-left"
               >
                 <h1 className="text-3xl  font-bold">Login</h1>
                 <Link

@@ -22,8 +22,8 @@ const UpdateProfile = () => {
       <Helmet>
         <title>Hospitality_UpdateProfile</title>
       </Helmet>
-      <div className="flex  h-screen md:h-screen lg:h-[calc(100vh-276px)] justify-center items-center flex-col">
-        <div className="flex flex-col justify-center max-w-xs p-6 shadow-2xl bg-sky-700 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+      <div className="flex  h-screen md:h-screen lg:h-screen justify-center items-center flex-col">
+        <div className="flex flex-col justify-center max-w-xl p-6 shadow-2xl py-9 bg-sky-700 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -35,6 +35,9 @@ const UpdateProfile = () => {
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
                 {user?.displayName}
+              </h2>
+              <h2 className="lg:text-xl md:text-lg  font-semibold text-xl break-all">
+                {user?.email}
               </h2>
             </div>
           </div>

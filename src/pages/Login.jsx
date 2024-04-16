@@ -66,12 +66,12 @@ const Login = () => {
         </div>
         <div className="divider">or</div>
         <div className="hero  ">
-          <div className="hero-content lg:flex-row-reverse flex-col">
+          <div className="hero-content md:flex-row-reverse lg:flex-row-reverse flex-col-reverse">
             <div
               style={{
                 backgroundImage: "url(https://i.ibb.co/HrQsRPf/login.jpg)",
               }}
-              className="text-center space-y-2 p-[30%] bg-no-repeat bg-contain lg:text-left"
+              className="text-center  space-y-2 p-[26%] bg-no-repeat bg-contain lg:text-left"
             >
               <h1 className="text-3xl font-bold">Register </h1>
               <Link
