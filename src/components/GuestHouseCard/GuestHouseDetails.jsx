@@ -34,7 +34,7 @@ const GuestHouseDetails = () => {
         <title>Hospitality_GuestHouse_Details</title>
       </Helmet>
       <div className="grid grid-cols-1 gap-9 p-3 rounded-lg">
-        <div className="border flex w-[100%] justify-center">
+        <div className="flex w-[100%] justify-center">
           {" "}
           <img
             className="h-[300px] md:h-[400px] lg:h-[630px] "
