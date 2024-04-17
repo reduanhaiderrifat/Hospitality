@@ -37,7 +37,7 @@ const UpdateProfile = () => {
                 {user?.displayName}
               </h2>
               <h2 className="lg:text-xl md:text-lg  font-semibold text-xl break-all">
-                {user?.email}
+                {user?.email || "Email not add"}
               </h2>
             </div>
           </div>
