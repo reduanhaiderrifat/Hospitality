@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import CommentsCard from "../components/CommentsCard";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import moment from "moment";
 const Comments = () => {
   const { user } = useContext(AuthContext);
   const [comments, setComments] = useState(() => {
@@ -39,7 +40,9 @@ const Comments = () => {
       <div className="w-full md:w-1/2 lg:w-1/2 mx-auto">
         <h2 className="text-center text-3xl font-bold my-12">
           Add your experience about our website and our property dealing
+          <p>{moment().format("D MMMM YYYY")}</p>
         </h2>
+
         <form onSubmit={handleFormSubmit}>
           <h2 className=" text-sm mb-1">
             If you login (Name and Email) are not required. You can ignor it.

@@ -19,7 +19,6 @@ Check out the live site [Hospitality](https://real-estate-hospitality-60cde.web.
 
 - **AOS**: Integrate [AOS](https://github.com/michalsnik/aos) (Animate On Scroll Library) for smooth and beautiful animations.
 - **react-text-transition**: Add smooth transitions to text elements with [react-text-transition](https://www.npmjs.com/package/react-text-transition).
-- **React-fast-marquee**: Implement scrolling elements easily with [React-fast-marquee](https://www.react-fast-marquee.com/documentation).
 - **React-helmet-async**: Dynamically manage document head metadata with [React-helmet-async](https://www.npmjs.com/package/react-helmet-async).
 - **React-hook-form**: Simplify form management with [React-hook-form](https://react-hook-form.com/get-started).
 - **Swiper**: [Swiper](https://swiperjs.com/demos) is a modern touch slider library for building responsive, mobile-friendly sliders and carousels.
@@ -29,6 +28,7 @@ Check out the live site [Hospitality](https://real-estate-hospitality-60cde.web.
 - **Motel-Details**: Display detailed information about motels available on your platform.
 - **Resort-Details**: Display detailed information about resorts available on your platform.
 - **GuestHouse-Details**: Display detailed information about guesthouses available on your platform.
+- **Client**: Client details those who buy there property from here and there some information here. -**Responsive**: This website is responsive for all device.
 - **Update-Profile**: Allow users to update their profile information and preferences.
 - **Booking**: Enable users to make bookings for accommodations directly through your platform.
 - **Hospitality-Categories**: Categorize accommodations into different hospitality categories for easy browsing and filtering.
