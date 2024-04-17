@@ -47,19 +47,19 @@ const Login = () => {
   const handleGoogleLogin = () => {
     handleGoogle().then(() => {
       navigate(location?.state ? location.state : "/");
-      toast.success("user login with Google");
+      toast.success("Successfully login with Google");
     });
   };
   const handleTwitterLogin = () => {
     handleTwitter().then(() => {
       navigate(location?.state ? location.state : "/");
-      toast.success("user login with Twitter");
+      toast.success("Successfully login with Twitter");
     });
   };
   const handleFacebookLogin = () => {
     handleFacebook().then(() => {
       navigate(location?.state ? location.state : "/");
-      toast.success("user login with Facebook");
+      toast.success("Successfully login with Facebook");
     });
   };
   return (

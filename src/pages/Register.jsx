@@ -77,6 +77,7 @@ const Register = () => {
       .then(() => {
         updateUser(username, photo).then(() => {});
         toast.success("User create successfully!");
+        toast.success("User login successfully!");
         setSuccess("User create successfully!");
         setReloade(true);
         navigate("/");
@@ -85,7 +86,24 @@ const Register = () => {
         setError(error.message);
       });
   };
-
+  const handleGoogleLogin = () => {
+    handleGoogle().then(() => {
+      navigate("/");
+      toast.success("Successfully login with Google");
+    });
+  };
+  const handleTwitterLogin = () => {
+    handleTwitter().then(() => {
+      navigate("/");
+      toast.success("Successfully login with Twitter");
+    });
+  };
+  const handleFacebookLogin = () => {
+    handleFacebook().then(() => {
+      navigate("/");
+      toast.success("Successfully login with Facebook");
+    });
+  };
   return (
     <>
       <Helmet>
@@ -93,15 +111,18 @@ const Register = () => {
       </Helmet>
       <div className="bg-[#b49b48a8] min-h-[calc(100vh-276px)] ">
         <div className="flex justify-center pt-3 gap-2 flex-col">
-          <button onClick={handleGoogle} className="btn mx-auto  lg:w-1/3">
+          <button onClick={handleGoogleLogin} className="btn mx-auto  lg:w-1/3">
             <FcGoogle size={30} />
             Login with Google
           </button>
-          <button onClick={handleTwitter} className="btn mx-auto lg:w-1/3">
+          <button onClick={handleTwitterLogin} className="btn mx-auto lg:w-1/3">
             <FaTwitter size={30} className="text-blue-500" />
             Login with Twitter
           </button>
-          <button onClick={handleFacebook} className="btn mx-auto lg:w-1/3">
+          <button
+            onClick={handleFacebookLogin}
+            className="btn mx-auto lg:w-1/3"
+          >
             <FaFacebook size={30} className="text-blue-500" />
             Login with Facebook
           </button>
